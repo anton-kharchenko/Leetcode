@@ -1,13 +1,7 @@
 public class Solution {
-    public string FirstPalindrome(string[] words) {
+    public string FirstPalindrome(string[] words) 
+        => words.FirstOrDefault(i=> i == string.Concat(i.Reverse()) ) ?? string.Empty;
         
-     foreach (var t in words)
-     {
-         if(t == string.Concat(t.Reverse())){
-             return t;
-         }
-     }
         
-        return string.Empty;
-    }
+    
 }
