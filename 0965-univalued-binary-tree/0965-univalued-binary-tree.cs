@@ -12,27 +12,22 @@
  * }
  */
 public class Solution {
-     List<int> list = new List<int>();
+  
     
     public bool IsUnivalTree(TreeNode root) {
-        Traversal(root);
-        for(var i =0; i<list.Count; i++){
-            if(i+1<list.Count && list[i] != list[i+1]){
-                return false;
-            }
+        if(root== null){
+            return true;
         }
         
-        return true;
+        return Halper(root, root.val);
     }
     
-    public void Traversal(TreeNode root){
+    public bool Halper(TreeNode root, int val){
         if(root == null){
-            return;
+            return true;
         }
         
-        list.Add(root.val);
-        Traversal(root.left);
-        Traversal(root.right);
+        return root.val == val && Halper(root.left, val) && Halper(root.right, val);
     }
     
     
