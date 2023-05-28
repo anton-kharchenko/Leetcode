@@ -33,6 +33,7 @@ public class Solution {
                 visited[row][i] = true;
             }
         }
+        
         for (var i = 0; i<matrix.Length; i++)
         {
             if(!visited[i][col] && matrix[i][col]!= 0)
