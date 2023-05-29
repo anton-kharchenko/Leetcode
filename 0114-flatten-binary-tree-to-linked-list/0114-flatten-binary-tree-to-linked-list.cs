@@ -14,9 +14,7 @@
 public class Solution {
     List<int> lst = new List<int>();
     public void Flatten(TreeNode root) {
-        Traversal(root);
-     
-        
+        Traversal(root); 
         for(var i = 1; i<lst.Count; i++){
             root.left = null;
             root.right = new TreeNode(lst[i]);
