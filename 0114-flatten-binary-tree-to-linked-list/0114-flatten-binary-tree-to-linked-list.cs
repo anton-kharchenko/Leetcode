@@ -12,24 +12,24 @@
  * }
  */
 public class Solution {
-    List<int> lst = new List<int>();
+    List<int> list = new List<int>();
     public void Flatten(TreeNode root) {
-        Traversal(root); 
-        for(var i = 1; i<lst.Count; i++){
+        PreOrder(root);
+        
+        for(var i = 1; i<list.Count; i++){
             root.left = null;
-            root.right = new TreeNode(lst[i]);
+            root.right = new TreeNode(list[i]);
             root = root.right;
         }
     }
     
-    public void Traversal(TreeNode node){
+    public void PreOrder(TreeNode node){
         if(node == null){
             return;
         }
         
-        lst.Add(node.val);
-        Traversal(node.left);
-        Traversal(node.right);
+        list.Add(node.val);
+        PreOrder(node.left);
+        PreOrder(node.right);
     }
-    
 }
