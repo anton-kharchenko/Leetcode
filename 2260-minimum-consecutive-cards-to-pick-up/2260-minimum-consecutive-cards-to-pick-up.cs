@@ -1,14 +1,16 @@
 public class Solution {
     public int MinimumCardPickup(int[] cards) {
         if(cards.Length < 2) return -1;
-        var min = int.MaxValue;
+        int min = int.MaxValue;
         var dic = new Dictionary<int, int>();
+        
         for(var i = 0; i<cards.Length; i++){
-            if(!dic.ContainsKey(cards[i])){
-                dic.Add(cards[i], i);
+            var key = cards[i];
+            if(!dic.ContainsKey(key)){
+                dic.Add(key, i);
             }else{
-                min = Math.Min(min, i -  dic[cards[i]] + 1);
-                dic[cards[i]] = i;
+                min = Math.Min(min, i -  dic[key] + 1);
+                dic[key] = i;
             }
         }
         
