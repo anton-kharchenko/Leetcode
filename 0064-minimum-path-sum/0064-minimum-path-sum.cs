@@ -1,7 +1,7 @@
 public class Solution {
     public int MinPathSum(int[][] grid) {
         int n = grid.Length, m = grid[0].Length;
-        var dp = new int[n,m];
+        var dp = new int[n, m];
         
         for(var i = 0; i<n; i++ ){
             for(var j = 0; j<m; j++){
@@ -21,4 +21,4 @@ public class Solution {
     }
 }
 
-// O(n^2)
+// O(n^m)
