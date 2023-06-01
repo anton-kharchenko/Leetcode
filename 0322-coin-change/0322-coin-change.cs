@@ -1,7 +1,7 @@
 public class Solution {
     public int CoinChange(int[] coins, int amount) {
         if(amount == 0) return 0;
-        
+        Array.Sort(coins);
         int[] dp = new int[amount+1];
         Array.Fill(dp, int.MaxValue);
         dp[0] = 0;
