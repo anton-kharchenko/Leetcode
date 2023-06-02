@@ -1,22 +1,24 @@
 public class Solution {
     public int HeightChecker(int[] heights) {
-
-        var expected =  heights.ToList(); // O(n)
+        var expected = new int[heights.Length];
         
-        expected.Sort(); // O(n log n)
+        Array.Copy(heights, expected, heights.Length);
         
-        var count = 0;
+        Array.Sort(expected); // O(n*logn)
         
-        for(var i =0; i<heights.Length; i++){
+        var result = 0;
+        
+        for(var i = 0; i<heights.Length; i++){ // O(n)
             if(heights[i] != expected[i]){
-                count++;
+                result++;
             }
-        } // O (n)
+        }
         
-        return count;
-        
+        return result;
     }
-    
-    //Time: O(n log n)
-    // Space O(2n) ~ O(n)
+
 }
+
+
+// Time -  O(n log n)
+// Space - O(n)
