@@ -37,13 +37,10 @@ public class Solution {
                 {
                     for(int n = 0; n < 3; n++)
                     {
-                        if(board[i + m][j + n] != '.')
-                        {
-                            if(set.Contains(board[i + m][j + n]))
+                            if(set.Contains(board[i + m][j + n]) && board[i + m][j + n] != '.')
                                 return false;
                             else
                                 set.Add(board[i + m][j + n]);
-                        }
                     }
                 }
             }
