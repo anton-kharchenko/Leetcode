@@ -1,6 +1,6 @@
 public class Solution {
     public int NumUniqueEmails(string[] emails) {
-        var list = new List<string>();
+        var set= new HashSet<string>();
         
         foreach(var email in emails){
             var s = email.Split("@");
@@ -13,12 +13,15 @@ public class Solution {
                 if(local[i]=='+') break;
                 temp += local[i];
             }
-            
-            list.Add(temp+"@"+domain);
+            var item = temp+"@"+domain;
+            if(!set.Contains(item)){
+                 set.Add(item);
+            }
+           
         }
         
-    var res =  list.Distinct();
-    return res.Count();
+    
+    return set.Count();
         
     }
 }
