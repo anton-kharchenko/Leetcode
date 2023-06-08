@@ -13,32 +13,34 @@
  */
 public class Solution {
     public IList<IList<int>> ZigzagLevelOrder(TreeNode root) {
-        var levels = new List<IList<int>>();
-        
-        if(root == null) return new List<IList<int>>();
+        var result = new List<IList<int>>();
+        if(root == null) return result;
         var queue = new Queue<TreeNode>();
-        queue.Enqueue(root);
-        var reversed = false;
+        var reverse = false;
         
-        while(queue.Count != 0){
+        queue.Enqueue(root);
+        while(queue.Count>0){
             var list = new List<int>();
             var count = queue.Count;
-            for(var i = 0; i<count; i++){
-                var node = queue.Dequeue();
-                list.Add(node.val);
-                if(node.left != null) queue.Enqueue(node.left);
-                if(node.right != null) queue.Enqueue(node.right);
-            }
             
-            if(reversed){
+            
+            for(var i = 0;i<count; i++){
+                var node = queue.Dequeue();
+                list.Add(node.val);   
+                if(node.left != null)  queue.Enqueue(node.left);
+                if(node.right != null)  queue.Enqueue(node.right);
+             }
+            
+            if(reverse){
                 list.Reverse();
             }
             
-            reversed = !reversed;
-            levels.Add(list);
+            reverse = !reverse;
+            result.Add(list);
         }
         
         
-        return levels;
+        
+        return result;
     }
 }
