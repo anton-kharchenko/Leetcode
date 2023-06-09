@@ -1,15 +1,17 @@
 public class Solution {
     public bool HasAllCodes(string s, int k) {
         var set = new HashSet<string>();
-        var target = (int)Math.Pow(2, k);
         var count = 0;
-        for(var i = 0;i<=s.Length - k; i++){
-            var subStr = s.Substring(i, k);
-            if(!set.Contains(subStr)){
-                set.Add(subStr);
+        var target = Math.Pow(2, k);
+        
+        for(var i = 0; i<= s.Length - k; i++){
+            var subString = s.Substring(i, k);
+            if(!set.Contains(subString)){
+                set.Add(subString);
                 count++;
             }
         }
+        
         
         return count == target;
     }
