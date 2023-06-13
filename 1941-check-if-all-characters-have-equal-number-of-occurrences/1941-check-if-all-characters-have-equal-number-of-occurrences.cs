@@ -10,18 +10,15 @@ public class Solution {
             }
         }
         
- 
-        
-        
+        var num = 0;
         if(dic.Count == 0) return true;
         
-        var num = dic.First().Value;
+        num = dic.First().Value;
         
         foreach(var (key, value) in dic){
-            if(value != num){
-                return false;
-            }
+            if(value != num) return false;
         }
+        
         
         return true;
     }
