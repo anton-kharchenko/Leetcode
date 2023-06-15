@@ -14,25 +14,12 @@
 public class Solution {
     public TreeNode InsertIntoBST(TreeNode root, int val) {
         if(root == null) return new TreeNode(val);
-        var result = root;
-        while(true){
-            if(result.val <= val){
-                if(result.right != null) {
-                    result = result.right;
-                }else{
-                    result.right = new TreeNode(val);
-                    break;
-                }
-
-            }else{
-              if(result.left != null) {
-                    result = result.left;
-                }else{
-                    result.left = new TreeNode(val);
-                    break;
-                }
-            }
-        }
+        
+        if(val>root.val){
+            root.right = InsertIntoBST(root.right, val);
+        }else if (val<root.val){
+            root.left = InsertIntoBST(root.left, val);
+        }    
 
         return root;
     }
