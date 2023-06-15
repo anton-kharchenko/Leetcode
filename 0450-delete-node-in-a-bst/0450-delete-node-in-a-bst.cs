@@ -12,29 +12,36 @@
  * }
  */
 public class Solution {
-    List<int> _list = new List<int>();
+    
     public TreeNode DeleteNode(TreeNode root, int key) {
-        Traversal(root);
-        _list.Sort();
-        _list.Remove(key);
-        return Build(0, _list.Count - 1);
-    }
-
-    private void Traversal(TreeNode node){
-        if(node == null) return;
-        _list.Add(node.val);
-        Traversal(node.left);
-        Traversal(node.right);
+        if(root == null)
+            return null;
+        
+        if(key<root.val)
+        {
+            root.left = DeleteNode(root.left, key);
+        }
+        else if(key>root.val){
+             root.right = DeleteNode(root.right, key);
+        } 
+        else{
+            if(root.left == null)
+                 return root.right;       
+            else if(root.right == null)
+                  return root.left;
+            
+            TreeNode minNode =  FindSmallest(root.right);
+            root.val = minNode.val;
+            root.right =  DeleteNode(root.right, minNode.val);
+        }
+        
+        return root;
+        
     }
     
-     private TreeNode Build(int l, int r){
-         if (l> r) {
-              return null;
-         }
-        var mid = (r+l) / 2;
-        var node = new TreeNode(_list[mid]);
-        node.left = Build(l, mid-1);
-        node.right = Build(mid+1, r);
-        return node;
+    public TreeNode FindSmallest(TreeNode root){
+        while(root.left != null) 
+            root = root.left;
+        return root;
     }
 }
