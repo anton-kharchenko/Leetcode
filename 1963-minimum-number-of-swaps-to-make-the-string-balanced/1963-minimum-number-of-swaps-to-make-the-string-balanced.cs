@@ -1,15 +1,18 @@
 public class Solution {
     public int MinSwaps(string s) {
-        int max = 0,  count = 0;
-        foreach(var c in s){
-            if(c == '['){
-                count -= 1;
+        int max = 0, curr = 0;
+        
+        for(var i = 0; i<s.Length; i++){
+            if(s[i] == ']'){
+                curr += 1;
             }else{
-                count += 1;
+                curr -= 1;
             }
-            max = Math.Max(max, count);
+            max = Math.Max(max, curr);
         }
-        var res = (max + 1) / 2;
-        return res;
+        
+        var result = (max + 1)/2;
+        
+        return result;
     }
 }
