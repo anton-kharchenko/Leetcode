@@ -5,16 +5,16 @@ public class Solution {
         return res;
     }
     
-    public void Helper(List<IList<int>> res, List<int> subSet, int n, int k, int index){
+    public void Helper(List<IList<int>> res, List<int> subSet, int n, int k, int number){
         if(subSet.Count==k){
             res.Add(subSet.ToList());
             return;
         }
-        if(index > n) return;
+        if(number > n) return;
         
-        subSet.Add(index);
-        Helper(res, subSet, n, k, index+1);
-        subSet.Remove(index);
-        Helper(res, subSet, n, k, index+1);
+        subSet.Add(number);
+        Helper(res, subSet, n, k, number+1);
+        subSet.Remove(number);
+        Helper(res, subSet, n, k, number+1);
     }
 }
