@@ -1,21 +1,25 @@
 public class Solution {
     public int SubarraySum(int[] nums, int k) {
-        int n = nums.Length; // size of the given array.
-        int cnt = 0; // Number of subarrays:
-
-        for (int i = 0 ; i < n; i++) { // starting index i
-            int sum = 0;
-            for (int j = i; j < n; j++) { // ending index j
-                // calculate the sum of subarray [i...j]
-                // sum of [i..j-1] + arr[j]
-                sum += nums[j];
-
-                // Increase the count if sum == k:
-                if (sum == k)
-                    cnt++;
+        var n = nums.Length;
+        var sum = 0;
+        var count = 0;
+        var dict = new Dictionary<int, int>();
+        dict[0] = 1;
+        
+        for(var i = 0;i<n; i++){
+            sum +=  nums[i];
+            var toRemove = sum - k;
+            
+            count += dict.ContainsKey(toRemove) ? dict[toRemove] : 0;
+            
+            if(dict.ContainsKey(sum)){
+                dict[sum] += 1;
+            }else{
+                 dict.Add(sum, 1);
             }
         }
-        return cnt;
+        
+        return count;
 
     }
 }
