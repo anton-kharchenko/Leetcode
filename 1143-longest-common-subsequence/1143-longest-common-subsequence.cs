@@ -10,18 +10,18 @@ public class Solution {
             }
         }
         
-        for(var i=n-1; i>=0; i--){
-            for(var j = m - 1;j>=0;j--){
+        for(var i=0; i<n; i++){
+            for(var j = 0;j<m;j++){
                 if(text1[i] == text2[j]){
-                    dp[i, j] = 1 + dp[i+1, j+1];
+                    dp[i+1, j+1] = 1 + dp[i, j];
                 }else{
-                    dp[i, j] = Math.Max(dp[i+1, j], dp[i, j+1]);
+                    dp[i+1, j+1] = Math.Max(dp[i, j+1], dp[i+1, j]);
                 }
             }
         }
         
         
-        return dp[0, 0];
+        return dp[n, m];
     }
 }
 
