@@ -1,32 +1,32 @@
 public class Solution {
     public int[] ReplaceElements(int[] arr) {
-    if(arr.Length == 1){
-        return new int[]{-1};
-    }
-     for(var i = 0; i<arr.Length; i++){
-         if(i+1<arr.Length){
-              arr[i] = FindMax(arr, i+1, arr.Length);
-         }
+        if(arr.Length == 1) return new int[]{-1};
         
-     }   
-       
+        for(var i = 0; i<arr.Length ; i++){
+            
+            if(i+1<arr.Length){
+                 arr[i] = FindMaxGreatest(arr, i+1, arr.Length);
+            }
+           
+        }
+        
         arr[^1] = -1;
         return arr;
     }
     
-    public int FindMax(int[] arr, int start, int end){
-        var max = arr[start];
+    public int FindMaxGreatest(int[] arr, int startIndex, int endIndex){
+        var max = arr[startIndex];
         
+        while(startIndex< endIndex){
+            var curr = arr[startIndex];
         
-        while(start<end){
-            var curr = arr[start];
-            if(max<curr){
+            if(curr>max){
                 max = curr;
             }
             
-            start++;
+            
+            startIndex++;
         }
-        
         
         return max;
     }
