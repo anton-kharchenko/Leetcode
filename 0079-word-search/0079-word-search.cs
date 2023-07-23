@@ -1,10 +1,5 @@
 public class Solution {
     public bool Exist(char[][] board, string word) {
-         if(board == null || board[0].Length == 0)
-            return false;
-        if(word == ""){
-             return false;
-        }
         
         for(var i = 0; i<board.Length; i++){
             for(var j = 0; j<board[0].Length; j++){
