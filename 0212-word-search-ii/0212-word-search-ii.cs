@@ -1,69 +1,69 @@
 public class Solution {
-    Node root = new Node();
+    public Node _root;
     public IList<string> FindWords(char[][] board, string[] words) {
-        foreach(var w in words){
-            Add(w);
+        _root = new Node();
+        foreach(var word in words){
+            AddNewWordToTrie(word);
         }
         
-        var result = new HashSet<string>();
         var n = board.Length;
         var m = board[0].Length;
-        var visited = new HashSet<(int, int)>();
+        var res = new HashSet<string>();
+        var set = new HashSet<(int, int)>();
         
-        for(var i =0; i<n; i++){
+        for(var i = 0; i<n; i++){
             for(var j = 0; j<m;j++){
-                Dfs(i, j, root, "", visited, board, n, m, result);
+                Dfs(board, i, j, n, m, set, "", _root, res);
             }
         }
-        
-        return result.ToList();
+        return res.ToList();
     }
     
     
-    public void Dfs(int r, int c, Node node, string word, HashSet<(int, int)> visited, char[][] board, int n, int m, HashSet<string> result){
-        if(r<0||c<0||r>=n || c>=m|| visited.Contains((r, c)) || !node.Children.ContainsKey(board[r][c])){
-            return;
+    
+    public void Dfs(char[][] board, int i, int j,  int n,  int m, HashSet<(int, int)> set, string word, Node root, HashSet<string> res){
+        if(i<0 || j <0 || i>=n || j>= m || set.Contains((i, j)) || !root._children.ContainsKey(board[i][j]))
+        {
+           return;    
         }
         
-        visited.Add((r, c));
-        node = node.Children[board[r][c]];
-        word += board[r][c];
+        set.Add((i, j));
         
-        if(node.IsWord){
-            result.Add(word);
+        word += board[i][j];
+        
+        root = root._children[board[i][j]];
+        
+        if(root.IsWord){
+            res.Add(word);
         }
-        
-        Dfs(r+1,c,node, word, visited, board, n,m, result);
-        Dfs(r-1,c,node, word, visited, board, n,m, result);
-        Dfs(r,c+1,node, word, visited, board, n,m, result);
-        Dfs(r,c-1,node, word, visited, board, n,m, result);
-        visited.Remove((r, c));
+            
+        Dfs(board, i+1, j, n, m, set, word, root, res);    
+        Dfs(board, i-1, j, n, m, set, word, root, res);    
+        Dfs(board, i, j+1, n, m, set, word, root, res);
+        Dfs(board, i, j-1, n, m, set, word, root, res);
+        set.Remove((i, j));
     }
     
-    
-    public void Add(string word){
-            var node = root;
-            foreach(var c in word){
-            if(!node.Children.ContainsKey(c)){
-                    node.Children[c] = new Node();
-            }
-                 node = node.Children[c];
-                 
+    public void AddNewWordToTrie(string word){
+        var node = _root;
+        
+        foreach(var c in word){
+            if(!node._children.ContainsKey(c)){
+                node._children[c] = new Node();
             }
             
-            node.IsWord = true;
-    }
-    
-}
-
-
-
-public class Node{
-        public bool IsWord{get; set;}
-        public Dictionary<char, Node> Children {get;set;}
-        
-        public Node(){
-            Children = new  Dictionary<char, Node>();
+            node = node._children[c];
         }
         
+        node.IsWord = true; 
+        
     }
+}
+
+public class Node{
+    public Dictionary<char, Node> _children;
+    public bool IsWord {get; set;}
+    public Node(){
+        _children = new Dictionary<char, Node>();
+    }
+}
