@@ -32,6 +32,6 @@ public class Solution {
          i = Math.Min(iMin, iMax);
      }
      
-     return result == 0 && limit>= 0 ? 1 : result;
+     return result == 0? 1 : result;
  }
 }
