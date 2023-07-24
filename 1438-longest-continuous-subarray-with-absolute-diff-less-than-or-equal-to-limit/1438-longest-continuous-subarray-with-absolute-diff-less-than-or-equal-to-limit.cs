@@ -8,8 +8,8 @@ public class Solution {
          var iMin = i;
          var iMax = i;
          var count = 0;
-         var j = i;
-         for( ; j<nums.Length; j++){
+         
+         for(var j = i ; j<nums.Length; j++){
              
              if(Math.Abs(nums[j] - min)>limit|| Math.Abs(nums[j] - max)>limit){
                  break;
