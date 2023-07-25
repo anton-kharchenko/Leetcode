@@ -42,14 +42,14 @@ public class Solution{
 
     public bool HaveOneDifference(string str1, string str2)
     {
-        bool seen = false;
+        bool haveDiff = false;
         for (int i = 0; i < str1.Length; i++)
         {
             if (str1[i] != str2[i])
             {
-                if (seen == true)
+                if (haveDiff == true)
                     return false;
-                seen = true;
+                haveDiff = true;
             }
         }
         return true;
