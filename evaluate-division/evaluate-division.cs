@@ -5,7 +5,6 @@ public class Solution {
     
     public double[] CalcEquation(IList<IList<string>> equations, double[] values, IList<IList<string>> queries) {
     
-        
         for(var i = 0; i<equations.Count; i++){
             adj.TryAdd(equations[i][0], new List<(string destiny, double cost)>());
             adj.TryAdd(equations[i][1], new List<(string destiny, double cost)>());
@@ -13,14 +12,13 @@ public class Solution {
             adj[equations[i][1]].Add((equations[i][0], 1/values[i]));
         }
         
-        
         foreach(var  query in queries){
             if(!adj.ContainsKey(query[0]) || !adj.ContainsKey(query[1])){
                 ans.Add(-1.0);
                 continue;
             }
             
-            var res = Dfs(query[0], query[1], 1.0);
+            var res = Dfs(query[0], query[1], 1);
             ans.Add(res);
             visited.Clear();
         }
@@ -38,8 +36,7 @@ public class Solution {
             if(!visited.Contains(node.destiny)){
                 var res = Dfs(node.destiny, end, prod * node.cost);
                
-                if(res>= 0)
-                    return res;
+                if(res>= 0) return res;
             }
         }
         
