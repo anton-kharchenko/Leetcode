@@ -12,23 +12,21 @@
  * }
  */
 public class Solution {
+    List<int> result = new List<int>();
     public IList<int> RightSideView(TreeNode root) {
-          IList<int> list = new List<int>();
-          helper(root, list, 1);
-          return list;
+        Dfs(root, 1);
+        return result;
+    }
+    
+    public void Dfs(TreeNode node, int level){
+        if(node == null) return;
+        
+        if(level > result.Count){
+            result.Add(node.val);
+        }
+        
+        Dfs(node.right, level + 1);
+        Dfs(node.left, level + 1);
     }
 
-
-void helper(TreeNode root, IList<int> lst, int level)
-      {
-          if (root == null) return;
-    
-          if(level > lst.Count)
-          {
-              lst.Add(root.val);
-          }
-    
-          helper(root.right, lst, level + 1);
-          helper(root.left, lst, level + 1);
-      }
 }
