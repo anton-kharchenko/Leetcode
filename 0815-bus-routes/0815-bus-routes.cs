@@ -1,44 +1,51 @@
-public class Solution {
-    public int NumBusesToDestination(int[][] routes, int source, int target) {
+public class Solution
+{
+    public int NumBusesToDestination(int[][] routes, int source, int target)
+    {
         if (source == target) return 0;
 
-        var g = new Dictionary<int, HashSet<int>>();
+        var map = new Dictionary<int, HashSet<int>>();
 
-        for (int i = 0; i < routes.Length; i++)
+        for (var numberOfStop = 0; numberOfStop < routes.Length; numberOfStop++)
         {
-            foreach (int stop in routes[i])
+            foreach (int numberOfBus in routes[numberOfStop])
             {
-                if (!g.ContainsKey(stop))
-                    g.Add(stop, new HashSet<int>());
-                g[stop].Add(i);
+                if (!map.ContainsKey(numberOfBus))
+                    map.Add(numberOfBus, new HashSet<int>());
+                map[numberOfBus].Add(numberOfStop);
             }
         }
 
-        if (!g.ContainsKey(source) || !g.ContainsKey(target)) return -1;
+        if (!map.ContainsKey(source) || !map.ContainsKey(target)) return -1;
 
-        var busHs = new HashSet<int>();
-        var stopHs = new HashSet<int>();
+        var buses = new HashSet<int>();
+        var stops = new HashSet<int>();
         var queue = new Queue<int>();
+        
         queue.Enqueue(source);
-        stopHs.Add(source);
+        stops.Add(source);
 
         var res = 0;
+        
         while (queue.Count > 0)
         {
             var size = queue.Count;
+            
             for (var i = 0; i < size; i++)
             {
-                var stop = queue.Dequeue();
-                if (stop == target) return res;
-                foreach (var nextBus in g[stop])
+                var numberOfBus = queue.Dequeue();
+                if (numberOfBus == target) return res;
+                
+                foreach (var numberOfStop in map[numberOfBus])
                 {
-                    if (busHs.Contains(nextBus)) continue;
-                    busHs.Add(nextBus);
-                    foreach (var nextStop in routes[nextBus])
+                    if (buses.Contains(numberOfStop)) continue;
+                    buses.Add(numberOfStop);
+                    
+                    foreach (var nextStop in routes[numberOfStop])
                     {
-                        if (stopHs.Contains(nextStop)) continue;
+                        if (stops.Contains(nextStop)) continue;
                         queue.Enqueue(nextStop);
-                        stopHs.Add(nextStop);
+                        stops.Add(nextStop);
                     }
                 }
             }
