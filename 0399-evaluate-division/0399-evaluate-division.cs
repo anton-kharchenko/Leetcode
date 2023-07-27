@@ -1,43 +1,44 @@
 public class Solution {
+    Dictionary<string, List<(string dest, double cost)>> adj = new Dictionary<string, List<(string dest, double cost)>>();
+    List<double> ans = new List<double>();
+    HashSet<string> visited = new HashSet<string>();
     public double[] CalcEquation(IList<IList<string>> equations, double[] values, IList<IList<string>> queries) {
-        var adjLst = new Dictionary<string, List<(string destiny, double qt)>>();
+    
         
         for(var i = 0; i<equations.Count; i++){
-            adjLst.TryAdd(equations[i][0], new List<(string destiny, double qt)>());
-            adjLst.TryAdd(equations[i][1], new List<(string destiny, double qt)>());
-            adjLst[equations[i][0]].Add((equations[i][1], values[i]));
-            adjLst[equations[i][1]].Add((equations[i][0], 1/values[i]));
+            adj.TryAdd(equations[i][0], new List<(string dest, double cost)>());
+            adj.TryAdd(equations[i][1], new List<(string dest, double cost)>());
+            adj[equations[i][0]].Add((equations[i][1], values[i]));
+            adj[equations[i][1]].Add((equations[i][0], 1/values[i]));
         }
         
-        var answer = new List<double>();
-        var visited = new HashSet<string>();
         
-        foreach(var  query in queries){
-            if(!adjLst.ContainsKey(query[0]) || !adjLst.ContainsKey(query[1])){
-               answer.Add(-1.0);
+        foreach(var q in queries){
+            if(!adj.ContainsKey(q[0]) || !adj.ContainsKey(q[1])){
+                ans.Add(-1.0);
                 continue;
             }
             
-            var res = Dfs(adjLst, visited, query[0], query[1], 1);
-            answer.Add(res);
+            var res = Dfs(q[0], q[1], 1);
+            ans.Add(res);
             visited.Clear();
         }
         
-        return answer.ToArray();
+        return ans.ToArray();
     }
     
-    private double Dfs(Dictionary<string, List<(string destiny, double qt)>> adjLst, HashSet<string> visited, string start, string end, double product){
+    
+    public double Dfs(string start, string end, double prod){
+        if(start == end){
+            return prod;
+        }
+        
         visited.Add(start);
         
-        if(start == end) 
-            return product;
-        
-        
-        foreach(var node in adjLst[start]){
-            if(!visited.Contains(node.destiny)){
-                var res = Dfs(adjLst, visited, node.destiny, end, product * node.qt);
-                
-                if(res>=0)return res;
+        foreach(var neigh in adj[start]){
+            if(!visited.Contains(neigh.dest)){
+               var res = Dfs(neigh.dest, end, prod * neigh.cost);  
+               if(res>= 0) return res;
             }
         }
         
