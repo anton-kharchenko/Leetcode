@@ -1,13 +1,15 @@
 public class Solution {
     public IList<string> TopKFrequent(string[] words, int k) {
-        var dictionary = new Dictionary<string, int>();
+        var dict = new Dictionary<string, int>();
+        
         foreach(var word in words){
-            if(dictionary.ContainsKey(word)){
-                dictionary[word]++;
+            if(dict.ContainsKey(word)){
+                dict[word]++;
             }else{
-                dictionary.Add(word, 1);
+                dict.Add(word, 1);
             }
         }
-        return dictionary.OrderByDescending(i=>i.Value).ThenBy(i=>i.Key).Take(k).Select(i=>i.Key).ToList();
+        
+        return dict.OrderByDescending(i=>i.Value).ThenBy(i=>i.Key).Take(k).Select(i=>i.Key).ToList();
     }
 }
