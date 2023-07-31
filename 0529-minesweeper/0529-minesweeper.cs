@@ -32,6 +32,7 @@ public class Solution {
     
     int GetMineCount(char[][]board, int r, int c){
         int count = 0;
+        
         foreach(var dir in directions){
             int row = dir[0] + r;
             int col = dir[1] + c;
