@@ -2,12 +2,13 @@ public class Solution
 {
     public int MagnificentSets(int n, int[][] edges)
     {
-      var graph = new List<int>[n+1];
-        
-        for(int i = 0; i <= n; i++)
+        var graph = new List<int>[n + 1];
+
+        for (int i = 0; i <= n; i++)
             graph[i] = new List<int>();
-        
-        foreach(int[] edge in edges){
+
+        foreach (int[] edge in edges)
+        {
             graph[edge[0]].Add(edge[1]);
             graph[edge[1]].Add(edge[0]);
         }
@@ -31,7 +32,7 @@ public class Solution
         return maxGroups;
     }
 
-    List<IList<int>> GetComponents(int n,  List<int>[] graph)
+    List<IList<int>> GetComponents(int n, List<int>[] graph)
     {
         var components = new List<IList<int>>();
         var visited = new HashSet<int>();
