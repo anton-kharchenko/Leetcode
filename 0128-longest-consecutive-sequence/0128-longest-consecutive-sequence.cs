@@ -1,32 +1,33 @@
-public class Solution {
-    public int LongestConsecutive(int[] nums) {
-    if(nums.Length == 0) return 0;
-    if(nums.Length == 1) return 1;
-			
-    Array.Sort(nums);
-        
-    var count = 0;
-    var maxCount = 0;
-        
-    for(var i = 0; i < nums.Length -1; i++){
-        
-        if(nums[i+1] - nums[i] == 1){
-            count++;
-        }
+public class Solution
+{
+    public int LongestConsecutive(int[] nums)
+    {
+        var set = new HashSet<int>(nums);
 
-        if (maxCount < count)
+        var maxLength = 0;
+       
+        while (set.Count > 0)
         {
-            maxCount = count;
-        }
-        
-        if (nums[i+1] - nums[i] > 1)
-        {
-            count = 0;
+            var first = set.First();
+            var last = first;
+
+            while (set.Contains(first - 1))
+            {
+                first -= 1;
+                set.Remove(first);
+            }
+
+            set.Remove(last);
+
+            while (set.Contains(last + 1))
+            {
+                last += 1;
+                set.Remove(last);
+            }
+
+            maxLength = Math.Max(maxLength, last - first + 1);
         }
 
-
-    }
-		
-    return maxCount + 1;
+        return maxLength;
     }
 }
