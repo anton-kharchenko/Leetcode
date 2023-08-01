@@ -14,15 +14,13 @@ public class Solution {
             count++;
         }
 
-        if (maxCount < count)
-        {
-            maxCount = count;
-        }
-        
         if (nums[i+1] - nums[i] > 1)
         {
             count = 0;
         }
+        
+        maxCount = Math.Max(maxCount, count);
+        
     }
 		
     return maxCount + 1;
