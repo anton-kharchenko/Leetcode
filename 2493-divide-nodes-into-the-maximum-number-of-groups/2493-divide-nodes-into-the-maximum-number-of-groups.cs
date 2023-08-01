@@ -14,14 +14,19 @@ public class Solution
         }
 
         var maxGroups = 0;
+
+        // Find list of components (graph can be disconnected);
         var components = GetComponents(n, graph);
 
+        //For each component's node run bfs and calculate the maximin number of groups we can get;
         foreach (var component in components)
         {
             var maxGroupsLocal = 0;
             foreach (var vert in component)
             {
                 var group = Bfs(vert, graph);
+
+                // In case of odd node cycle (graph isn't bipartile) - return -1;
                 if (group == -1) return -1;
                 maxGroupsLocal = Math.Max(maxGroupsLocal, group);
             }
