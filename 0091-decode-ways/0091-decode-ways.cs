@@ -1,18 +1,19 @@
-public class Solution {
-    public int NumDecodings(string s) {
-        var dp = Enumerable.Repeat(1, s.Length +1).ToList();
+public class Solution
+{
+    public int NumDecodings(string s)
+    {
+        var dp = new int[s.Length + 1];
+        Array.Fill(dp, 1);
         
         for(var i = s.Length - 1; i>=0; i--){
-            if(s[i] == '0'){
+            if(s[i] =='0'){
                 dp[i] = 0;
             }else{
-                dp[i]= dp[i+1];
+                dp[i] = dp[i+ 1];
             }
             
-            if(i+1<s.Length && (s[i] == '1' || 
-                                (s[i] == '2' && "0123456".Contains(s[i+1]))
-              )){
-                dp[i] += dp[i+2]; 
+            if(i+1<s.Length && (s[i] == '1' || (s[i] == '2' && "0123456".Contains(s[i+1])))){
+                dp[i] += dp[i+2];
             }
         }
         
