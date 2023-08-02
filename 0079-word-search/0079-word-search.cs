@@ -1,35 +1,43 @@
 public class Solution {
+    int n = 0;
+    int m = 0;
     public bool Exist(char[][] board, string word) {
-        for(var i = 0; i<board.Length; i++){
-            for(var j = 0; j<board[0].Length; j++){
-                if(Dfs(i, j, board.Length, board[0].Length, board, word, 0)){
+        n = board.Length;
+        m = board[0].Length;
+        
+        for(var i = 0; i<n; i++ ){
+            for(var j = 0; j<m; j++){
+                if(Dfs(i, j, word, 0, board)){
                     return true;
                 }
             }
         }
         
+        
         return false;
     }
     
-    public bool Dfs(int i, int j, int n, int m, char[][] board, string word, int index){
+    
+    public bool Dfs(int i, int j, string word, int index, char[][]board){
         if(index == word.Length){
             return true;
         }
         
-        if(i<0 || j<0 || i>= n || j>=m || board[i][j] != word[index]){
+        if(i>= n|| j>=m || i<0|| j<0|| word[index] != board[i][j]){
             return false;
         }
         
         board[i][j] = '#';
         
-        var res = Dfs(i+1, j, n, m, board, word, index + 1) ||
-                  Dfs(i-1, j, n, m, board, word, index + 1) ||
-            Dfs(i, j+1, n, m, board, word, index + 1) ||
-            Dfs(i, j-1, n, m, board, word, index + 1);
+        var res = Dfs(i+1, j, word, index + 1, board) || 
+        Dfs(i-1, j, word, index + 1, board) || 
+            Dfs(i, j+1, word, index + 1, board) || 
+            Dfs(i, j-1, word, index + 1, board);
         
         board[i][j] = word[index];
         
         return res;
     }
+
     
 }
