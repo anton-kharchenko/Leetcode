@@ -16,18 +16,16 @@ public class Solution {
     
     }
     
-    public void Dfs(int row, int col, int[][] matrix, HashSet<(int, int)> visited){
-        
-        visited.Add((row, col));
+    public void Dfs(int row, int col, int[][] matrix, HashSet<(int, int)> visited){visited.Add((row, col));
         
         for(var i = 0;i< m; i++ ){
-            if(visited.Contains((row, i)) || matrix[row][i] == 0) continue;
+            if( visited.Contains((row, i)) ||  matrix[row][i] == 0) continue;
             matrix[row][i] = 0;
             visited.Add((row, i));
         }
         
         for(var j = 0;j< n; j++ ){
-            if(visited.Contains((j, col)) || matrix[j][col] == 0) continue;
+            if( visited.Contains((j, col)) ||  matrix[j][col] == 0) continue;
             matrix[j][col] = 0;
             visited.Add((j, col));
         }
