@@ -1,64 +1,68 @@
 public class Solution {
     public IList<string> FullJustify(string[] words, int maxWidth) {
         var res = new List<string>();
-        var remainingList = new List<string>();
-        var subSetLength = 0;
+        var temp = new List<string>();
         var wordLength = 0;
+        var currentLength = 0;
         
         foreach(var word in words){
-            subSetLength += word.Length + 1;
-            
-            if(subSetLength> maxWidth + 1){
-                var line = BuildLine(remainingList, wordLength,  maxWidth);
+            currentLength += word.Length + 1;
+            if(currentLength > maxWidth + 1){
+                var line =  BuildLine(temp, maxWidth, wordLength);
                 res.Add(line);
-                remainingList.Clear();
-                subSetLength = word.Length + 1;
+                temp.Clear();
+                currentLength = word.Length + 1;
                 wordLength = 0;
             }
-            
-            remainingList.Add(word);
-            wordLength += word.Length; 
+
+            wordLength += word.Length;
+            temp.Add(word);
         }
         
-        if(remainingList.Any()){
+        
+        if(temp.Any()){
             var line = "";
-            foreach(var w in remainingList){
-                line += $"{w} ";
+            
+            foreach(var i in temp){
+                line += $"{i} ";
             }
             
-           line = line.Trim().PadRight(maxWidth);
+            line = line.Trim().PadRight(maxWidth);
             res.Add(line);
         }
         
         return res;
     }
     
-    public string BuildLine(List<string> words, int wordLength, int maxWidth){
-        var wordCount = words.Count;
-        var totalSpaces = maxWidth - wordLength;
+    public string BuildLine(List<string> words, int maxWidth, int wordLength){
         
-        if(wordCount == 1)
+        var spaces = words.Count - 1;
+        var totalSpaces = maxWidth - wordLength;
+
+        
+        if(words.Count == 1)
             return words[0].PadRight(maxWidth);
-        if(wordCount == 2)
-            return words[0] + "".PadRight(totalSpaces) + words[1];
+        
+        if(words.Count == 2)
+            return words[0] + "".PadRight(totalSpaces)  + words[1];
+        
+        var countSpacesBetweenWords  = totalSpaces / spaces;
+        var extra = totalSpaces % spaces;
         
         var sb = new StringBuilder();
-        
-        var numberOfSpaces = wordCount -1;
-        var spacesPerWord = totalSpaces / numberOfSpaces;
-        var extra = totalSpaces % numberOfSpaces;
         
         for(var i = 0; i<words.Count; i++){
             sb.Append(words[i]);
             
-           if(i != wordCount - 1){
-                sb.Append(' ', spacesPerWord);
+            if(i != words.Count - 1){
+             sb.Append(' ', countSpacesBetweenWords);
             }
-            if(extra>0
-              ){
+            
+            if(extra>0){
                 sb.Append(' ', 1);
-                extra--;
+                extra --;
             }
+            
         }
         
         return sb.ToString();
