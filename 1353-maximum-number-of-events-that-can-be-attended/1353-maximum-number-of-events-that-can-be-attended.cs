@@ -1,12 +1,6 @@
 public class Solution {
     public int MaxEvents(int[][] events) {
-       // Sort the events by the end time and in case of tie by the start time in ascending order.
-        Array.Sort(events, (a, b) => {
-            if (a[1] == b[1]) {
-                return a[0] - b[0];
-            }
-            return a[1] - b[1];
-        });
+      events = events.OrderBy(x => x[1]).ThenBy(x => x[0]).ToArray();
         
         var calendar = new HashSet<int>();
         var lastEventEnd = events[events.Length -1][1];
