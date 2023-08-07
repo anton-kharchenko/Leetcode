@@ -9,7 +9,8 @@ public class Solution {
         
         while(m>=n){
             long subN = n;
-            for(var i = 1; m>= subN;){
+            var i = 1;
+            while(m>= subN){
                 m -= subN;
                 res += i;
             }
