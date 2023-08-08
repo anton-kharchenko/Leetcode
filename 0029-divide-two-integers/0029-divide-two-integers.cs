@@ -8,16 +8,11 @@ public class Solution {
         var m = Math.Abs((long) dividend);
         var n = Math.Abs((long) divisor);
         
-        
         while(m>=n){
-            long subN = n;
-            var i = 1;
-            while(m>= subN){
-                m -= subN;
-                res += i;
-            }
+                m -= n;
+                res++;
         }
-        
+    
         return res * sign;
     }
 }
