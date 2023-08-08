@@ -38,7 +38,7 @@ public class Solution {
     
     public string Builder(List<string> words,  int maxWidth, int wordLength){
         var length = words.Count;
-        var spaces = words.Count  - 1 ;
+        var spaces = words.Count  - 1 ; 
         var totalSpaces = maxWidth -  wordLength;
 
         
@@ -52,6 +52,7 @@ public class Solution {
         
         var spacesPerWord = totalSpaces / spaces;
         var extra = totalSpaces % spaces; 
+        
         
         for(var i = 0; i<length; i++){
             var word = words[i];
