@@ -1,13 +1,13 @@
 public class Solution {
     public int Jump(int[] nums) {
-        int ans = 0, currEnd = 0, currFar = 0;
+        int ans = 0, curr = 0, next = 0;
 
         for(int i = 0; i < nums.Length - 1; i++) {  
-            currFar = Math.Max(currFar, i + nums[i]);
+            next = Math.Max(next, i + nums[i]);
 
-            if (i == currEnd) {
+            if (i == curr) {
                 ans++;
-                currEnd = currFar;
+                curr = next;
             }
         }   
 
