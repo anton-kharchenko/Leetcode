@@ -36,17 +36,14 @@ public class Solution
 
             if (edgInf.IsStart)
             {
-                if (!openByHeight.TryGetValue(edgInf.Height, out var countHeight))
-                {
-                    countHeight = 0;
-                }
-
-                openByHeight[edgInf.Height] = ++countHeight;
+                openByHeight.TryAdd(edgInf.Height, 0);
+                openByHeight[edgInf.Height]++;
             }
             else
             {
                 var countHeight = openByHeight[edgInf.Height];
-                if (--countHeight == 0)
+                countHeight--;
+                if (countHeight == 0)
                     openByHeight.Remove(edgInf.Height);
                 else
                     openByHeight[edgInf.Height] = countHeight;
