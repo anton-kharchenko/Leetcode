@@ -6,12 +6,11 @@ public class Solution
         foreach (var building in buildings)
         {
             if (building[0] >= building[1]) continue;
-            allByPosition.Add(new EdgeInfo() { Position = building[0], Height = building[2], IsStart = true });
-            allByPosition.Add(new EdgeInfo() { Position = building[1], Height = building[2], IsStart = false });
+            allByPosition.Add(new EdgeInfo { Position = building[0], Height = building[2], IsStart = true });
+            allByPosition.Add(new EdgeInfo { Position = building[1], Height = building[2], IsStart = false });
         }
 
         var sortedPosition = allByPosition.OrderBy(x => x.Position).ToList();
-
         var res = new List<IList<int>>();
         var lastHeight = -1;
         var lastPosition = -1;
@@ -46,7 +45,7 @@ public class Solution
             }
             else
             {
-                int countHeight = openByHeight[edgInf.Height];
+                var countHeight = openByHeight[edgInf.Height];
                 if (--countHeight == 0)
                     openByHeight.Remove(edgInf.Height);
                 else
@@ -55,7 +54,7 @@ public class Solution
         }
 
         if (lastPosition != -1)
-            res.Add(new List<int>() { lastPosition, 0 });
+            res.Add(new List<int> { lastPosition, 0 });
 
         return res;
     }
