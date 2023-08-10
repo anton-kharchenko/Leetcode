@@ -1,9 +1,8 @@
 public class Solution {
 
     bool isSquare = false;
+    
     public bool Makesquare(int[] nums) {
-        var n = nums.Length;
-        
         var sum = nums.Sum();
 
         if (sum % 4 != 0) {
@@ -25,7 +24,9 @@ public class Solution {
     }
 
     private void DFS(int[] nums, int start, int[] current) {
-        if (current.All(num => num == 0)) isSquare = true;
+        
+        if (current.All(num => num == 0)) 
+            isSquare = true;
 
         if (isSquare) return;
 
