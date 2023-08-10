@@ -1,45 +1,38 @@
 public class MedianFinder {
-    PriorityQueue<double,double> H = new ();
-    PriorityQueue<double,double> L = new ();
-    double median;
+    PriorityQueue<double,double> _high = new ();
+    PriorityQueue<double,double> _low = new ();
+    double _median;
     public MedianFinder() {
         
     }
     
     public void AddNum(int num) {
-        if(H.Count==0)
+        if(_high.Count==0)
         {    
-            H.Enqueue(num,num);
-            median = num;
+            _high.Enqueue(num,num);
+            _median = num;
         }
-        else if(H.Count==L.Count)
+        else if(_high.Count==_low.Count)
         {
-            double d = L.Dequeue();
-            double h = d>num? d: num;
-            H.Enqueue(h,h);            
+            var d = _low.Dequeue();
+            var h = d>num? d: num;
+            _high.Enqueue(h,h);            
             h = d>num? num: d;
-            L.Enqueue(h,-h);
-            median = H.Peek();
+            _low.Enqueue(h,-h);
+            _median = _high.Peek();
         }
         else
         {
-            double d = H.Dequeue();
-            double h = Math.Min(num,d);
-            L.Enqueue(h,-h);
+            var d = _high.Dequeue();
+            var h = Math.Min(num,d);
+            _low.Enqueue(h,-h);
             h = Math.Max(num,d);
-            H.Enqueue(h,h);
-            median = (H.Peek() + L.Peek())/2;
+            _high.Enqueue(h,h);
+            _median = (_high.Peek() + _low.Peek())/2;
         }
     }
     
     public double FindMedian() {
-        return median;
+        return _median;
     }
 }
-
-/**
- * Your MedianFinder object will be instantiated and called as such:
- * MedianFinder obj = new MedianFinder();
- * obj.AddNum(num);
- * double param_2 = obj.FindMedian();
- */
