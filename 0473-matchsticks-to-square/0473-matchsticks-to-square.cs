@@ -3,7 +3,7 @@ public class Solution {
     bool isSquare = false;
     public bool Makesquare(int[] nums) {
         var n = nums.Length;
-        if (n < 4) return false;
+        
         var sum = nums.Sum();
 
         if (sum % 4 != 0) {
@@ -11,7 +11,10 @@ public class Solution {
         }
 
         var len = sum / 4;
-        if (nums.Any(num => num > len)) return false;
+        
+        if (nums.Any(num => num > len))
+            return false;
+        
         Array.Sort(nums, (a, b) => b - a);
 
         var current = new int[4] { len, len, len, len };
