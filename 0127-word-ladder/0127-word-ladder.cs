@@ -1,57 +1,69 @@
-public class Solution{
+public class Solution
+{
     public int LadderLength(string beginWord, string endWord, IList<string> wordList)
     {
-        Queue<string> q = new Queue<string>();
-        HashSet<string> set = new HashSet<string>(wordList);
-        q.Enqueue(beginWord);
+        var q = new Queue<string>();
+        var set = new HashSet<string>(wordList);
+        var level = 2;
+        
         set.Remove(beginWord);
+        q.Enqueue(beginWord);
 
-        int level = 2;
-
-        while (q.Any())
+        while (q.Count > 0)
         {
-            int size = q.Count;
-
-            for (int i = size; i > 0; i--)
+            var size = q.Count;
+           
+            for (var i = size; i > 0; i--)
             {
-                string curr = q.Dequeue();
+                var curr = q.Dequeue();
+                var templist = new List<string>();
 
-                List<string> templist = new List<string>();
-
-                foreach (var item in set)
+                foreach (var j in set)
                 {
-                    if(HaveOneDifference(curr,item))
+                    if (HaveOneDiff(curr, j))
                     {
-                        if (item == endWord)
+                        if (j == endWord)
+                        {
                             return level;
-                        q.Enqueue(item);
-                        templist.Add(item);
-                    }
+                        }
 
+                        q.Enqueue(j);
+                        templist.Add(j);
+                    }
                 }
+
                 foreach (var item in templist)
                 {
                     set.Remove(item);
                 }
             }
+
+
             level++;
         }
+
 
         return 0;
     }
 
-    public bool HaveOneDifference(string str1, string str2)
+    public bool HaveOneDiff(string source, string dest)
     {
-        bool haveDiff = false;
-        for (int i = 0; i < str1.Length; i++)
+        var hasOneDiff = false;
+
+        for (var i = 0; i < source.Length; i++)
         {
-            if (str1[i] != str2[i])
+            if (source[i] != dest[i])
             {
-                if (haveDiff == true)
+                if (hasOneDiff)
+                {
                     return false;
-                haveDiff = true;
+                }
+
+                hasOneDiff = true;
             }
         }
+
+
         return true;
     }
-} 
+}
