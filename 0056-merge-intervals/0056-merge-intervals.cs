@@ -8,17 +8,17 @@ public class Solution {
         
         
         for(var i = 0; i<n; i++){
-            start = Math.Min(intervals[i][0], start);
-            end = Math.Max(intervals[i][1], end);
+            start = Math.Min(start, intervals[i][0]);
+            end = Math.Max(end, intervals[i][1]);
             
-            if(i == n-1 || end < intervals[i+1][0]){
-                ans.Add(new int[2]{start, end});
-                start = int.MaxValue;
-                end = 0;
+            
+            if( i+1 == n || intervals[i+1][0]>end){
+                 ans.Add(new int[2]{start, end});
+                 start = int.MaxValue;
+                 end = 0;
             }
-            
+           
         }
-        
         
         return ans.ToArray();
     }
