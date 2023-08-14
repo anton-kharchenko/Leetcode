@@ -3,47 +3,43 @@ public class Solution
     Dictionary<int, List<int>> map = new Dictionary<int, List<int>>();
     public int NumBusesToDestination(int[][] routes, int source, int target)
     {
-        
-        for(int bus = 0; bus<routes.Length; bus++){
-            foreach(var st in routes[bus]){
-                map.TryAdd(st, new List<int>());
-                map[st].Add(bus);
+        if(source == target) return 0;
+        for(var bus = 0;bus<routes.Length; bus++){
+            foreach(var stop in routes[bus]){
+                map.TryAdd(stop, new List<int>());
+                map[stop].Add(bus);
             }
         }
-        var res = 0;
-        
-        if(source == target) return 0;
         
         var q = new Queue<int>();
-        var stops = new HashSet<int>();
         var busses = new HashSet<int>();
+        var stops = new HashSet<int>();
+        
         q.Enqueue(source);
         stops.Add(source);
+        var level = 0;
         
         while(q.Count>0){
-            var size = q.Count();
+            var size = q.Count;
             for(var i = 0; i<size; i++){
-                var stop = q.Dequeue();
-                if(stop == target)
-                    return res;
+                var curr = q.Dequeue();
+                if(curr == target) 
+                    return level;
                 
-                foreach(var bus in map[stop]){
+                foreach(var bus in map[curr]){
                     if(busses.Contains(bus)) continue;
                     busses.Add(bus);
-                    foreach(var s in routes[bus]){
-                        if(stops.Contains(s)) continue;
-                        stops.Add(s);
-                        q.Enqueue(s);
-                    }
                     
+                    foreach(var stop in routes[bus]){
+                        if(stops.Contains(stop)) continue;
+                        q.Enqueue(stop);
+                        stops.Add(stop);
+                    }
                 }
-                
             }
-            
-            
-            res++;
+            level++;
         }
         
-        return  -1;
+        return -1;
     }
 }
