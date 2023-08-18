@@ -1,45 +1,54 @@
 public class Solution {
-    int[][] directions = new int[][]{new []{0,1}, new []{0,-1},  new []{1, 0}, new []{-1, 0}, new []{1,1}, new []{-1, -1}, new []{1, -1},new []{-1, 1}};
+        int n = 0;
+        int m = 0;
+        int[][] directions = new int[][]{new []{0,1}, new []{0,-1},  new []{1, 0}, new []{-1, 0}, new []{1,1}, new []{-1, -1}, new []{1, -1},new []{-1, 1}};
     public char[][] UpdateBoard(char[][] board, int[] click) {
+        n = board.Length;
+        m = board[0].Length;
+        
         Dfs(board, click[0], click[1]);
         return board;
     }
     
-    void Dfs(char[][]board, int r, int c){
-      if(r < 0 || r >= board.Length || c < 0 || c >= board[0].Length || board[r][c] == 'B')
-        return;  
-        
-        if(board[r][c] == 'M'){
-            board[r][c] = 'X';
-            return;
-        }
-        var mineCount = GetMineCount(board, r, c);
-        
-        if(mineCount>0){
-             board[r][c] = (char)('0'+mineCount);
+    void Dfs(char[][] board, int row, int col){
+        if(row<0 || col < 0 ||row>=n || col >= m || board[row][col] == 'B'){
             return;
         }
         
-        if(mineCount  == 0){
-            board[r][c] = 'B';
+        if(board[row][col] == 'M'){
+            board[row][col] = 'X';
+            return;
+        }
+        
+        var getMineNumber = GetMineNumber(board, row, col);
+       
+        if(getMineNumber > 0){
+             board[row][col] = (char) (getMineNumber + '0');
+             return;
+        }
+        
+        if(getMineNumber==0){
+            board[row][col] ='B';
             foreach(var dir in directions){
-                int row = dir[0] + r;
-                int col = dir[1] + c;
-                Dfs(board, row, col);
+                var r = row + dir[0];
+                var c = col + dir[1];
+                Dfs(board, r, c);
             }
         }
+        
     }
     
-    int GetMineCount(char[][]board, int r, int c){
+    int GetMineNumber(char[][] board, int row, int col){
         int count = 0;
         
         foreach(var dir in directions){
-            int row = dir[0] + r;
-            int col = dir[1] + c;
-            if(row >= 0 && row < board.Length && col >= 0 && col < board[0].Length && board[row][col] == 'M')
+            int r = row + dir[0];
+            int c = col + dir[1];
+            if(r>=0 && c>=0 && r<n && c<m && board[r][c] == 'M')
                 count++;
         }
         
         return count;
     }
+
 }
