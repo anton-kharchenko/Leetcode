@@ -4,8 +4,7 @@ public class Solution {
         
         for(var i = 0; i<nums.Length; i++){
             if(nums[i] != val){
-                nums[index] = nums[i];
-                index++;
+                nums[index++] =  nums[i];
             }
         }
         
