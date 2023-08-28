@@ -2,15 +2,17 @@ public class Solution
 {
     public int RemoveDuplicates(int[] nums)
     {
-        var array = new HashSet<int>(nums).ToArray();
+        var arr = new HashSet<int>(nums).ToArray(); // O(n)
         
-        Array.Fill(nums, 0);
+        Array.Fill(nums, 0); // O(n)
         
-        for (var i = 0; i < array.Length; i++)
-        {
-            nums[i] = array[i];
+        for(var i = 0; i<arr.Length; i++){
+            nums[i] = arr[i]; 
         }
-
-        return array.Length;
+        
+        return arr.Length;
     }
 }
+
+// Space - O(n)
+// Time - O(n)
