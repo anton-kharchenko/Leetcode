@@ -1,22 +1,24 @@
 public class Solution {
     public int LongestBeautifulSubstring(string word) {
-        var set = new HashSet<char>();
-        var res = 0;
+        var max = 0;
         var start = 0;
+        var hashSet = new HashSet<char>();
         
         for(var end = 0; end<word.Length; end++){
-            if(end > 0 && word[end]<word[end - 1]){
+            
+            if(end > 0 && word[end] < word[end - 1]){
+                hashSet.Clear();
                 start = end;
-                set.Clear();
             }
             
-            set.Add(word[end]);
             
-            if(set.Count == 5){
-                res = Math.Max(res, end - start + 1);
-            }
+            hashSet.Add(word[end]);
+            
+            if(hashSet.Count == 5) 
+                max = Math.Max(max, end - start + 1);
         }
         
-        return res;
+        
+        return max;
     }
 }
