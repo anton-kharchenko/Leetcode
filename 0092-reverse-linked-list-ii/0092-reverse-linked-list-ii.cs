@@ -13,10 +13,10 @@ public class Solution {
     public ListNode ReverseBetween(ListNode head, int left, int right) {
         if(left == right) return head;
         var dummy = new ListNode(-1, head);
-        var counter = 0;
         var temp = dummy;
+        var counter = 0;
         
-        while(counter< left - 1){
+        while(counter<left - 1){
             temp = temp.next;
             counter++;
         }
@@ -26,12 +26,12 @@ public class Solution {
         var t = temp.next;
         
         while(counter<right){
-            stack.Push(t);
-            t = t.next;
-            counter++;
+           stack.Push(t);
+           t = t.next;
+           counter++;
         }
         
-        while(stack.Count>0){
+        while(stack.Count> 0){
             temp.next = stack.Pop();
             temp = temp.next;
         }
