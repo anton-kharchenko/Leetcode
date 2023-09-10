@@ -12,23 +12,18 @@
  * }
  */
 public class Solution {
-    List<int> list = new List<int>();
-    
+    List<int> nodes = new List<int>();
     public int KthSmallest(TreeNode root, int k) {
-        AddValue(root);
-        list.Sort();
-        return list[k-1];
+        Dfs(root);
+        nodes.Sort(); // Time - O(n logn); Space - O (n)
+        return nodes[k-1];
     }
-
-    public void AddValue(TreeNode node){
-        if(node == null){
-            return;
-        }
+    
+    public void Dfs(TreeNode node){
+        if(node == null) return;
         
-        AddValue(node.left);
-        list.Add(node.val);
-        AddValue(node.right);
+        nodes.Add(node.val);
+        Dfs(node.left);
+        Dfs(node.right);
     }
-
-
 }
