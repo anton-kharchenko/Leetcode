@@ -1,30 +1,34 @@
 public class Solution {
-    List<string> res = new List<string>();
+    
+    List<string> result = new List<string>();
     Dictionary<string, List<string>> flights = new Dictionary<string, List<string>>();
     public IList<string> FindItinerary(IList<IList<string>> tickets) {
-        
-        foreach (var ticket in tickets) {
+
+        foreach(var ticket in tickets){
             flights.TryAdd(ticket[0], new List<string>());
             flights[ticket[0]].Add(ticket[1]);
         }
         
-        foreach(var flight in flights ){
+        foreach(var flight in flights){
             flight.Value.Sort();
         }
         
-       Dfs("JFK"); 
-
-        return res;
+        Dfs("JFK");
+        
+        return result;
     }
     
-    private void Dfs(string departure){
+    
+    public void Dfs(string departure){
         
-        while(flights.ContainsKey(departure) && flights[departure].Count>0){
+        while(flights.ContainsKey(departure) && flights[departure].Count > 0){
             var next = flights[departure][0];
             flights[departure].RemoveAt(0);
             Dfs(next);
         }
         
-        res.Insert(0, departure);
+        
+        result.Insert(0, departure);
     }
+
 }
