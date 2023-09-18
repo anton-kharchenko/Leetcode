@@ -13,12 +13,11 @@ public class Solution {
             }
         }
         
-        var sortedDict = dict.OrderBy(i=>i.Value);
-        var values = sortedDict.Select(i=>i.Key).ToArray();
+        var sortedDict = dict.OrderBy(i=>i.Value).Select(i=>i.Key).ToArray();
         var ans = new int[k];
         
         for(var i = 0; i<k; i++){
-            ans[i] = values[i];
+            ans[i] = sortedDict[i];
         }
         
         return ans;
