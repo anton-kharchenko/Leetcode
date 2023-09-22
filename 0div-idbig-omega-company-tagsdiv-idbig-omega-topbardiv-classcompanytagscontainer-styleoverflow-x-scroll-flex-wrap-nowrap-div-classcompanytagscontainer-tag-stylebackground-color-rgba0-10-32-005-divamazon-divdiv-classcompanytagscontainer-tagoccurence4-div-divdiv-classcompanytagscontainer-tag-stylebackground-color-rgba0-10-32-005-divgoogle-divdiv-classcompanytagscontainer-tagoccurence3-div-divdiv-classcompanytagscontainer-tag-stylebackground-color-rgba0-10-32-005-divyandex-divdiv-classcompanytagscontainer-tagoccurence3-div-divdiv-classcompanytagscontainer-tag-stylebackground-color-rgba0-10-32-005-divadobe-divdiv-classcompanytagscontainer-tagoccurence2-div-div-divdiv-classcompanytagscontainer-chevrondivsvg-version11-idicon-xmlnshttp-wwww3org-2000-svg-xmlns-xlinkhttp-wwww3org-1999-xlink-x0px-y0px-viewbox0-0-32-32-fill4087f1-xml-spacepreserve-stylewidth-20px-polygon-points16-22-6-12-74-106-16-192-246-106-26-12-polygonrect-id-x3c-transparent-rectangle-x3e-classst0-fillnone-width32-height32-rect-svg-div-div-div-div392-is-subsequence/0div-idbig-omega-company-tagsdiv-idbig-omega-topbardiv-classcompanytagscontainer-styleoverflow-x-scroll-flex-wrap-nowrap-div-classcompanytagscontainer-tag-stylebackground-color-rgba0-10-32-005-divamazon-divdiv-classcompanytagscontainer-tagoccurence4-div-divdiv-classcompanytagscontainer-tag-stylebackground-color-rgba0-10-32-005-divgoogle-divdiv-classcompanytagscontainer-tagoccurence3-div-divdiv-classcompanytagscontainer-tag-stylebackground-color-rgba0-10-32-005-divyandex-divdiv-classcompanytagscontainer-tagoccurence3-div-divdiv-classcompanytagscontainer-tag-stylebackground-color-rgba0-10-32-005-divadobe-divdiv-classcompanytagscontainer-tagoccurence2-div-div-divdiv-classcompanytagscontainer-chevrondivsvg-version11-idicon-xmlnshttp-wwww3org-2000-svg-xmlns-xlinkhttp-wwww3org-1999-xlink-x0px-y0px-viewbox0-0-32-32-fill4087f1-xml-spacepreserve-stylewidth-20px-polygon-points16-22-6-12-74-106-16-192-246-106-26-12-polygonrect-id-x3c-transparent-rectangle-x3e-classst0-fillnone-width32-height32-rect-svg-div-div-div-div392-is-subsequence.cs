@@ -12,7 +12,7 @@ public class Solution {
             if(sPointer == s.Length){
                 return true;
             }
-        }
+        } // time - O(t), space - O(1) 
         
         return false;
     }
