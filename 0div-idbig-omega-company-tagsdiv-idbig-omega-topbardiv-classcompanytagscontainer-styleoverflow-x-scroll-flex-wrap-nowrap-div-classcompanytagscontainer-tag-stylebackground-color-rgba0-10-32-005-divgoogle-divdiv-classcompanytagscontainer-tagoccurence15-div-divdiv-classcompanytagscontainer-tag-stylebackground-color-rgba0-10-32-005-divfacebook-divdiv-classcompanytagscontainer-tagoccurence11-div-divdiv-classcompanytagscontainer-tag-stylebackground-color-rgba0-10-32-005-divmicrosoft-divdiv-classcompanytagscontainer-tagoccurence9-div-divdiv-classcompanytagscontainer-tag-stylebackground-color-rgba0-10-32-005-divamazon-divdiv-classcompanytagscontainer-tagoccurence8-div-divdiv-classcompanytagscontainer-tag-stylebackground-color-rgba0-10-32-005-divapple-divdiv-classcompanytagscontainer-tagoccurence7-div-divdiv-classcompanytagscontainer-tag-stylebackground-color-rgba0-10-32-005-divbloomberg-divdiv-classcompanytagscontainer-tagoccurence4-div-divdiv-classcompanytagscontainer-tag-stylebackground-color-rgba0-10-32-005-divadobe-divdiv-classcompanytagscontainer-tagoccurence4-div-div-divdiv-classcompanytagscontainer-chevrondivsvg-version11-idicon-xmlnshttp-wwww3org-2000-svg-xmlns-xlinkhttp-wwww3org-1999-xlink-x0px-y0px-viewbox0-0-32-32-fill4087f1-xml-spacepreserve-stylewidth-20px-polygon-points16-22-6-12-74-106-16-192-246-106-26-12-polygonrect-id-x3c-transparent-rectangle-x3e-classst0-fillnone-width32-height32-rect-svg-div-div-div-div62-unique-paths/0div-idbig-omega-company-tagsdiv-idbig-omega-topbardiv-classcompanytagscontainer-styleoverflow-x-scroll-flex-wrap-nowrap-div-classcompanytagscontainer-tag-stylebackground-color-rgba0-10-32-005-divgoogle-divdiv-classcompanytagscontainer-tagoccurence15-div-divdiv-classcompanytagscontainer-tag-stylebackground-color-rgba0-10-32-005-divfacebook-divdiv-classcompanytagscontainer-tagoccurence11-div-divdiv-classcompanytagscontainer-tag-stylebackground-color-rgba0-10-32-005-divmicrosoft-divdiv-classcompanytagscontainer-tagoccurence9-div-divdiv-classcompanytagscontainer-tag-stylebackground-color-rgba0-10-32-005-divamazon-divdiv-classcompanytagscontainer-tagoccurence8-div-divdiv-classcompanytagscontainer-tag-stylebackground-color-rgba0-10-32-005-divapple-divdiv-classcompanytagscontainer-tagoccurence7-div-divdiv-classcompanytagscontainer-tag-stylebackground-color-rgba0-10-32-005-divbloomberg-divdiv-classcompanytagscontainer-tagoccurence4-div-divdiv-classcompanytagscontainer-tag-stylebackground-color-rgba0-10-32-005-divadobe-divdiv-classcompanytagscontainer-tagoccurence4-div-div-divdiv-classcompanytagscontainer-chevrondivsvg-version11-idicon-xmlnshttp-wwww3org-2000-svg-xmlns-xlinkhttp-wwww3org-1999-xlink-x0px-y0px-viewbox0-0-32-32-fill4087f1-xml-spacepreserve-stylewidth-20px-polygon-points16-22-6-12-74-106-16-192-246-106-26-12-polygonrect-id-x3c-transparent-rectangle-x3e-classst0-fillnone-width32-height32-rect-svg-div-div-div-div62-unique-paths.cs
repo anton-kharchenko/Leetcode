@@ -1,24 +1,24 @@
 public class Solution {
     public int UniquePaths(int m, int n)
     {
-        return Memo(new int[m + 1, n + 1], 0, 0, m, n);
+        return Memo(0, 0, m, n, new int[m + 1, n + 1]);
     }
     
-    
-    public int Memo(int[,] cache, int row, int col, int m, int n){
+    public int Memo(int row, int col, int m, int n, int[,] cache){
         if(row == m || col == n){
             return 0;
         }
         
-        if(cache[row, col] >  0){
-            return cache[row, col];
-        }
-        
-        if(row == m-1 && col == n-1){
+        if(row == m -1 && col == n -1){
             return 1;
         }
         
-        cache[row, col] = Memo(cache, row + 1, col, m, n) + Memo(cache, row, col+1, m, n);
+        if(cache[row, col]> 0){
+            return cache[row, col];
+        }
+            
+        cache[row, col] = Memo(row +1, col, m, n, cache) + Memo(row, col+1, m, n, cache);
+        
         return cache[row, col];
     }
 }
