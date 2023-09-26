@@ -1,22 +1,28 @@
 public class Solution {
     public string RemoveDuplicateLetters(string s) {
         var freq = new int[26];
-        var used = new int[26]; 
-        var res = new List<char>(); 
-
-        foreach(var ch in s)
-            freq[ch-'a']++;
-             
-        foreach(char ch in s){
-            freq[ch - 'a']--;
-            if(used[ch -'a']++ > 0) continue;
-            // res not empty && ch < front char && front char shows behand
-            while (res.Count != 0 && res[res.Count - 1] > ch && freq[res[res.Count - 1] - 'a'] > 0){
-                used[res[res.Count - 1] - 'a'] = 0;
-                res.RemoveAt(res.Count - 1);
+        var visited = new HashSet<char>();
+        var stack = new Stack<char>();
+        
+        for(var i = 0; i<s.Length; i++){
+            freq[s[i] - 'a'] = i;
+        }
+        
+        for(var i = 0; i<s.Length; i++){
+            var currentChar = s[i];
+            if(visited.Contains(currentChar))continue;
+        
+            while(stack.Count> 0 && stack.Peek() > currentChar && freq[stack.Peek() - 'a'] > i ){
+               var el = stack.Pop();
+                visited.Remove(el);
             }
-            res.Add(ch);
-        }        
-        return new String(res.ToArray());
+            
+            stack.Push(currentChar);
+            visited.Add(currentChar);
+        }
+        
+        var arr = stack.ToArray();
+        Array.Reverse(arr);
+        return new string(arr);
     }
 }
