@@ -20,27 +20,24 @@ public class Solution {
     
     public int Find(int x){
         if(parent[x] != x){
-            parent[x] =  Find(parent[x]);
+            parent[x] = Find(parent[x]);
         }
         return parent[x];
     }
     
-    public bool CanUnion(int x, int y){
-        var parentX = Find(x);
-        var parentY = Find(y);
-        if(parentX == parentY){
-            return false;
-        }
+    public bool CanUnion(int firstNode, int secondNode){
+        var parentFirstNode = Find(firstNode);
+        var parentSecondNode = Find(secondNode);
         
-        if(rank[parentX] > rank[parentY]){
-            parent[parentY] = parentX;
-        }else if(rank[parentX] < rank[parentY]){
-           parent[parentX] = parentY;  
+        if(parentFirstNode == parentSecondNode) return false;
+        if(parentFirstNode> parentSecondNode){
+            parent[parentSecondNode] = parentFirstNode;
+        }else if(parentFirstNode< parentSecondNode){
+            parent[parentFirstNode] = parentSecondNode;
         }else {
-           parent[parentX] = parentY;
-            rank[parentX]++;
+            parent[parentSecondNode] = parentFirstNode;
+            rank[parentFirstNode]++;
         }
-        
         
         return true;
     }
