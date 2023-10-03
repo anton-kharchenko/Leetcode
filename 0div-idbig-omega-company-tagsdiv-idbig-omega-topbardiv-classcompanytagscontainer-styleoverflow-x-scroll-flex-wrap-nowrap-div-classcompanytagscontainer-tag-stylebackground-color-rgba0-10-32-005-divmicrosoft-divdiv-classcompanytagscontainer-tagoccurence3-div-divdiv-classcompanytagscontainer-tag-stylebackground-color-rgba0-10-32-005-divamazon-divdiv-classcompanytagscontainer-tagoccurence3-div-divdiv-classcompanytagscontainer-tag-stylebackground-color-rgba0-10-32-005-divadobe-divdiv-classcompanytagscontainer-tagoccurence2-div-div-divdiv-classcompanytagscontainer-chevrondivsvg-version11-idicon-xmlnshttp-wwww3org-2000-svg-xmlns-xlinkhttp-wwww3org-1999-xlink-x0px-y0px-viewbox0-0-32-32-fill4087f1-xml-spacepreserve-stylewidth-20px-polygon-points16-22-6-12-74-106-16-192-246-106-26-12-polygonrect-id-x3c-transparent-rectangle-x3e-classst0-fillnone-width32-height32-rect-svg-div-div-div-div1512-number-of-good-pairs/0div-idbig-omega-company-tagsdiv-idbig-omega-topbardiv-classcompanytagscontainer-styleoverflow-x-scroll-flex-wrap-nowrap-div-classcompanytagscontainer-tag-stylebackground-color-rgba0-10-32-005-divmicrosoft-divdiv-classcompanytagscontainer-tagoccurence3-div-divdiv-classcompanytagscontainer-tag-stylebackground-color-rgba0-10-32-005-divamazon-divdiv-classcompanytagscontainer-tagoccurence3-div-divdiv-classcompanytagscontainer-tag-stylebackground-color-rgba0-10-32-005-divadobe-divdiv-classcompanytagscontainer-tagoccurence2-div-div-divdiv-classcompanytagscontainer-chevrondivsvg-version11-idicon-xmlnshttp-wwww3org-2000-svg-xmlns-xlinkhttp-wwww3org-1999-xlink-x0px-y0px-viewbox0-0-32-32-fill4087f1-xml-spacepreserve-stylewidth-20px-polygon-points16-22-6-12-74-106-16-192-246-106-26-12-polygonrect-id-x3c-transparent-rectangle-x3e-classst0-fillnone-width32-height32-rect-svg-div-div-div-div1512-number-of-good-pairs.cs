@@ -12,9 +12,7 @@ public class Solution {
         }
         
         foreach(var (key, value) in dictionary){
-            if(value > 1){
-               answer +=  CountGoodPairs(value - 1);
-            }
+               answer +=  CountGoodPairs(value);
         }
         
         return answer;
@@ -22,13 +20,11 @@ public class Solution {
     
     
     public int CountGoodPairs(int num){
-        var answer = 0;
-        
-        for(var i = 1; i<= num; i++){
-            answer += i;
+        var result = 0;
+        for(var i = 1; i< num; i++){
+            result += i;
         }
-        
-        return answer;
+        return result;
     }
     
 }
