@@ -1,22 +1,23 @@
 public class MyHashMap {
-    int[] arr;
+    int[] hashMap;
+    
     public MyHashMap() {
-        arr = new int[1000001];
-        Array.Fill(arr, int.MinValue);
+          hashMap =   new int[1000001];
+        Array.Fill(hashMap, int.MinValue);
     }
     
-    public void Put(int key, int value) {
-        arr[key] = value;
+    public void Put(int key, int value) { 
+        hashMap[key] = value;
     }
     
     public int Get(int key) {
-        if(arr[key] != int.MinValue)
-            return arr[key];
-        return -1;   
+        if(hashMap[key] != int.MinValue)  
+            return hashMap[key];
+        return -1;
     }
     
-    public void Remove(int key) {
-        arr[key] = int.MinValue;
+    public void Remove(int key) {  
+        hashMap[key] = int.MinValue;
     }
 }
 
