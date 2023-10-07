@@ -20,9 +20,8 @@ public class Solution {
         if(node == null){
             return 0;
         }
-        var left = 1 + Dfs(node.left);
-        var right = 1 + Dfs(node.right);
-        
+      var left =  1 + Dfs(node.left);
+      var right = 1 + Dfs(node.right);
         return Math.Max(left, right);
     }
 }
