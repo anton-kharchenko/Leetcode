@@ -13,15 +13,15 @@
  */
 public class Solution {
     public int MaxDepth(TreeNode root) {
-        return Dfs(root);
+       return root == null ? 0 : Math.Max( 1 + MaxDepth(root.left),  1 + MaxDepth(root.right));
     }
     
-    public int Dfs(TreeNode node){
-        if(node == null){
-            return 0;
-        }
-      var left =  1 + Dfs(node.left);
-      var right = 1 + Dfs(node.right);
-        return Math.Max(left, right);
-    }
+    // public int Dfs(TreeNode node){
+    //     if(node == null){
+    //         return 0;
+    //     }
+    //   var left =  1 + Dfs(node.left);
+    //   var right = 1 + Dfs(node.right);
+    //     return Math.Max(left, right);
+    // }
 }
