@@ -1,24 +1,38 @@
 public class Solution {
     public int[] SearchRange(int[] nums, int target) {
-        int[] ints = new int[2] { -1, -1 };
-
-        var l = 0;
-        var r = nums.Length - 1;
+       var searchRange = new int[2]{-1, -1};
+       if(nums.Length == 0)
+            return searchRange;
+       searchRange[0] = FindIndex(nums, target, true);
+       searchRange[1] = FindIndex(nums, target, false); 
+       return searchRange; 
+    }
+    
+    public int FindIndex(int[] nums, int target, bool isStart){
+        int start = 0; 
+        int end = nums.Length - 1; 
+        int result = -1;
         
-        while(l<=r){
-            if(nums[l]== target && nums[r]==target){
-                return new int[2]{l, r};
+        while(start <= end)
+        {
+            int mid = start + (end - start) / 2;
+            
+            if(nums[mid] == target)
+            {
+                result = mid;
+                if(isStart){
+                    end = mid - 1;
+                }else{
+                    start = mid + 1;
+                }
             }
-            if(nums[l]<target){
-               l++;  
-            }
-           if(nums[r]>target){
-             r--;  
-           } 
+            else if(nums[mid] < target)
+                start = mid + 1;
+            else
+                end = mid - 1;
         }
         
-
-        return ints;
-
+        return result;
     }
+    
 }
