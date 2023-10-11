@@ -1,22 +1,23 @@
 public class Solution {
-    List<IList<int>> res = new List<IList<int>>();
-    List<int> sub = new List<int>();
     public IList<IList<int>> Subsets(int[] nums)
     {
-        
-        Dfs(0, nums);
-        return res;
+        var subsets = new List<IList<int>>();
+        var candidate = new List<int>();
+        var index = 0;
+        Backtracking(nums, index, candidate, subsets);
+        return subsets;
     }
     
-    public void Dfs(int index, int[] nums){
+    public void Backtracking(int[] nums, int index, List<int> candidate, List<IList<int>> subsets){
         if(index == nums.Length){
-            res.Add(sub.ToList());
+            subsets.Add(candidate.ToList());
             return;
         }
         
-        sub.Add(nums[index]);
-        Dfs(index + 1, nums);
-        sub.Remove(nums[index]);
-        Dfs(index + 1, nums);
+        candidate.Add(nums[index]);
+        Backtracking(nums, index+1, candidate,  subsets);
+        candidate.RemoveAt(candidate.Count - 1);
+        Backtracking(nums, index+1, candidate,  subsets);
     }
+    
 }
