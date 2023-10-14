@@ -14,21 +14,21 @@
 public class Solution {
     int ans = 0;
     public int GoodNodes(TreeNode root) {
-        GetCountGoodNodes(root, root.val, root.val);
+        GetCountGoodNodes(root, root.val);
         return ans;
     }
     
-    public void GetCountGoodNodes(TreeNode node, int prevValue, int target){
+    public void GetCountGoodNodes(TreeNode node, int prevValue){
         if(node == null)
             return;
         
-        if( node.val >= prevValue && node.val >= target ){
+        if( node.val >= prevValue){
             prevValue = node.val;
             ans++;
         }
         
-        GetCountGoodNodes(node.left, prevValue, target);
-        GetCountGoodNodes(node.right, prevValue, target);
+        GetCountGoodNodes(node.left, prevValue);
+        GetCountGoodNodes(node.right, prevValue);
     }
     
 }
