@@ -12,35 +12,13 @@
  * }
  */
 public class Solution {
-    int temp = 0;
-    bool flag = false;
-    
     public bool HasPathSum(TreeNode root, int targetSum) {
-        Dfs(root, targetSum);
-        return flag;
-    }
-    
-    public void Dfs(TreeNode node,  int sum){
-        if(flag){
-            return;
+        if(root== null){
+             return false;
         }
-        
-        if(node == null){
-            return;
+        if(root.left == null && root.right == null && targetSum == root.val){
+            return true;
         }
-        
-        temp += node.val;
-        
-        if(node.left == null && node.right == null){
-            if(temp == sum){
-                flag = true;       
-            }
-        }
-        
-        Dfs(node.left, sum);
-        Dfs(node.right, sum);
-           
-        
-        temp -= node.val;
+        return  HasPathSum(root.left, targetSum - root.val)  || HasPathSum(root.right, targetSum - root.val);
     }
 }
