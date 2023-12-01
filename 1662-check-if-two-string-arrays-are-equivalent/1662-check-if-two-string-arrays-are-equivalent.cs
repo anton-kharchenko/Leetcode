@@ -1,16 +1,16 @@
 public class Solution {
-    public bool ArrayStringsAreEqual(string[] word1, string[] word2) {
-        var str1 = string.Empty; 
-        var str2 = string.Empty; 
+    public bool ArrayStringsAreEqual(string[] word1, string[] word2) { // T - O(n + m); S - O(n + m) 
+        StringBuilder stringBuilder1 = new StringBuilder();
+        StringBuilder stringBuilder2 = new StringBuilder();
         
-        for(var i = 0; i<word1.Length; i++){
-            str1 += word1[i];
+        foreach(string word in word1){
+            stringBuilder1.Append(word);
+        }
+              
+        foreach(string word in word2){
+            stringBuilder2.Append(word);
         }
         
-        for(var i = 0; i<word2.Length; i++){
-            str2 += word2[i];
-        }
-        
-        return str1 == str2;
+        return stringBuilder1.ToString()  == stringBuilder2.ToString();
     }
 }
