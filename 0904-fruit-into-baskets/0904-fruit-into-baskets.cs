@@ -1,36 +1,31 @@
 public class Solution {
     public int TotalFruit(int[] fruits) {
-    var dict = new Dictionary<int, int>();
-    int res =0, l=0, total =0;
+        int totalFruit = 0;
+        Dictionary<int, int> frequency = new  Dictionary<int, int>();
+        int currentFruitCount = 0;
+        int leftPointer = 0;
         
-    foreach (var fruit in fruits)
-    {
-        if(dict.ContainsKey(fruit)){
-            dict[fruit]++;
-        }else{
-            dict.Add(fruit, 1);
-        }
-               
-        total += 1;
+        foreach(int fruit in fruits){
+            if(frequency.ContainsKey(fruit)){
+                frequency[fruit] += 1;
+            }else{
+                frequency.Add(fruit, 1);
+            }
+            currentFruitCount += 1;
             
-        while(dict.Count > 2){
-                
-            var left = fruits[l];
-            dict[left]--;
-            
-            if(dict[left]<=0){
-                dict.Remove(left);
+            if(frequency.Count>2){
+                int fruitToDelete = fruits[leftPointer];
+                frequency[fruitToDelete] -= 1;
+                currentFruitCount -= 1;
+                leftPointer += 1;
+                if(frequency[fruitToDelete] == 0){
+                    frequency.Remove(fruitToDelete);
+                }
             }
             
-            total -= 1;
-            l++;
+            totalFruit = Math.Max(totalFruit, currentFruitCount);
         }
-         
         
-        res = Math.Max(res, total);
-    }
-        
-    return res;
-        
+        return totalFruit;
     }
 }
