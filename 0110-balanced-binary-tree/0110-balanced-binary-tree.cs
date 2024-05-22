@@ -13,20 +13,17 @@
  */
 public class Solution {
   public bool IsBalanced(TreeNode root) {
-    return Dfs(root) != -1;
-}
-    
-    public int Dfs(TreeNode root){
-        if(root == null){
-            return 0;
-        }
-        
-        int leftHeight = Dfs(root.left);
-        if(leftHeight == - 1) return -1;
-        int rightHeight = Dfs(root.right);
-        if(rightHeight == - 1) return -1;
-        
-        if(Math.Abs(leftHeight - rightHeight) > 1) return - 1;
-        return Math.Max(leftHeight, rightHeight) + 1;
-    }
+    if(root == null) 
+        return true;
+
+    if(Math.Abs(GetTreeHeight(root.left) - GetTreeHeight(root.right)) > 1) 
+        return false;
+
+    return  IsBalanced(root.left) && IsBalanced(root.right);   
+  }
+
+  private int GetTreeHeight(TreeNode root){
+    if(root == null) return 0;
+    return 1 + Math.Max(GetTreeHeight(root.left), GetTreeHeight(root.right));
+  }  
 }
