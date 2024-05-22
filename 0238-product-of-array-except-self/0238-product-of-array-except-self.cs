@@ -1,24 +1,24 @@
 public class Solution {
     public int[] ProductExceptSelf(int[] nums) {
-        var ans = new int[nums.Length];
-        var left = new int[nums.Length];
-        var right =  new int[nums.Length];
-        
-        Array.Fill(left, 1);
-        Array.Fill(right, 1);
-        
-        for(var i = 1; i<nums.Length; i++){
-            left[i] = left[i-1] * nums[i-1];
+        var length = nums.Length;
+        var leftProduct = new int[length];
+        var rightProduct = new int[length];
+        var result = new int[length];
+        Array.Fill(leftProduct, 1);
+        Array.Fill(rightProduct, 1);
+
+        for(var i = 1; i<length; i++){
+            leftProduct[i] = leftProduct[i - 1] * nums[i-1];
         }
-        
-        for(var i = nums.Length -2; i>=0; i--){
-            right[i] = right[i+1] * nums[i+1];
+
+        for(var i = length - 2; i>= 0; i--){
+            rightProduct[i] = rightProduct[i + 1] * nums[i + 1];
         }
-        
-        for(var i = 0; i<nums.Length; i++){
-            ans[i] = left[i] * right[i];
+
+        for(var i = 0; i<length; i++){
+            result[i] = leftProduct[i] * rightProduct[i];
         }
-        
-        return ans;
+
+        return result;
     }
 }
