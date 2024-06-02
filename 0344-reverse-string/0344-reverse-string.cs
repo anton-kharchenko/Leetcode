@@ -1,12 +1,11 @@
 public class Solution {
     public void ReverseString(char[] s) {
-        var l = 0;
-        var r = s.Length - 1;
-
-        while(l < r){
-            (s[l], s[r]) = (s[r], s[l]);
-            l++;
-            r--;
+        int start = 0;
+        int end = s.Length - 1;
+        while(start<=end){
+            (s[start], s[end]) = (s[end], s[start]);
+            start += 1;
+            end -= 1;
         }
     }
 }
