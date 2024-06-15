@@ -1,34 +1,24 @@
 public class Solution {
- public bool IsSubsequence(string s, string t)
+    public bool IsSubsequence(string s, string t)
     {
-        return Recursion(s, t, 0, 0, new Dictionary<string, bool>());
-    }
+        int[,] cache = new int[s.Length + 1, t.Length + 1];
 
-    public bool Recursion(string s, string t, int indexS, int indexT, Dictionary<string, bool> cache)
-    {
-        if (t.Length == indexT && s.Length != indexS)
+        for (int i = 1; i <= s.Length; i++)
         {
-            return false;
+            for (int j = 1; j <= t.Length; j++)
+            {
+                if (s[i - 1] == t[j - 1])
+                {
+                    cache[i, j] = cache[i - 1, j - 1] + 1;
+                }
+                else
+                {
+                    cache[i, j] = Math.Max(cache[i, j - 1],  cache[i - 1, j]);
+                }
+            }    
         }
 
-        if (s.Length == indexS)
-        {
-            return true;
-        }
 
-        var key = indexT + "," + indexS;
-
-        if (cache.ContainsKey(key))
-        {
-            return cache[key];
-        }
-
-        if (t[indexT] == s[indexS])
-        {
-            cache.TryAdd(key, Recursion(s, t, indexS + 1, indexT + 1, cache));
-        }
-
-        cache.TryAdd(key, Recursion(s, t, indexS, indexT + 1, cache));
-        return cache[key];
+        return cache[s.Length, t.Length] == s.Length ? true : false;
     }
 }
