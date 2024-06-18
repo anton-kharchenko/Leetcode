@@ -1,22 +1,31 @@
 public class Solution {
     public int UniquePaths(int m, int n)
     {
-
-    var arr = new int[m,n];
-  
-
-    for(var i = 0; i<m; i++){
-        for(var j = 0; j<n; j++){
-            arr[i,j] = 1;
+        int[,] lookup = new int[m, n];
+        
+        for (int row = lookup.Length - 1; row >= 0; row--)
+        {
+            for (int col = lookup.Length - 1; col >= 0; col--)
+            {
+                if (row == m - 1 && col == n - 1)
+                {
+                    lookup[row, col] = 1;
+                }else if (row == m - 1 && col < n - 1)
+                {
+                    lookup[row, col] = lookup[row, col + 1];
+                }else if (col == n - 1 && row < m - 1)
+                {
+                    lookup[row, col] = lookup[row + 1, col];
+                }
+                else if(row < m - 1 && col < n - 1)
+                {
+                    lookup[row, col] = lookup[row + 1, col] + lookup[row, col + 1]; 
+                }
+                
+            }
         }
-    }
-
-    for(var i = 1; i < m; i++){
-        for(var j = 1; j < n; j++){
-            arr[i,j] = arr[i-1, j] + arr[i, j-1];
-        }
-    }
-
-    return arr[m-1, n-1];
+        
+        return lookup[0, 0];
+        //return Recursion(m, n, 1, 1, new int[m + 1, n + 1]);
     }
 }
