@@ -1,22 +1,32 @@
 public class Solution {
     public int UniquePathsWithObstacles(int[][] obstacleGrid) {
-        int n  = obstacleGrid.Length, m = obstacleGrid[0].Length;
-        
-        var dp = new int[m];
-        dp[m-1] = 1;
-        
-        for(var i = n -1; i>= 0; i--){
-            for(var j = m-1;j>=0; j--){
-                if(obstacleGrid[i][j] == 1){
-                    dp[j] = 0;
-                }else if(j+1 < m){
-                    dp[j] = dp[j] + dp[j+1];
-                }
-            }
+       return GetPaths(obstacleGrid, 1, 1, new int[obstacleGrid.Length + 1, obstacleGrid[0].Length + 1]);  
+    }   
+
+    public int GetPaths(int[][] obstacleGrid, int row, int col, int[,] lookup){        
+        if(row == obstacleGrid.Length  && col == obstacleGrid[0].Length && obstacleGrid[row - 1][col - 1] != 1){
+            return 1;
         }
-        
-        return dp[0];
+
+        if(obstacleGrid[row - 1][col - 1] == 1){
+            return 0;
+        }
+
+        if(lookup[row, col] != 0){
+            return lookup[row, col];
+        }
+
+        if(row == obstacleGrid.Length){
+            lookup[row, col] =  GetPaths(obstacleGrid, row, col + 1, lookup);
+            return lookup[row, col];
+        }
+
+        if(col == obstacleGrid[0].Length){
+            lookup[row, col] = GetPaths(obstacleGrid, row + 1, col, lookup);
+            return lookup[row, col];
+        }
+
+        lookup[row, col] = GetPaths(obstacleGrid, row + 1, col, lookup) + GetPaths(obstacleGrid, row, col + 1, lookup);
+        return lookup[row, col];
     }
-    
-   
 }
