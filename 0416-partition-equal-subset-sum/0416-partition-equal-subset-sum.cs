@@ -9,18 +9,28 @@ public class Solution
         if (sum % 2 != 0) return false;
         sum /= 2;
         lookup = new bool[nums.Length + 1, sum + 1];
-        return Recursion(nums, 0, sum);
-    }
 
-    public bool Recursion(int[] nums, int index, int sum){
-        if (sum == 0) return true;
-        if (index == nums.Length || sum < 0 || lookup[index, sum]) return false;
-
-        if(Recursion(nums, index + 1, sum - nums[index]) || Recursion(nums, index + 1, sum)) return true;
+        for (int i = 0; i <= nums.Length; i++)
+        {
+            for (int j = 0; j <= sum; j++)
+            {
+                if (i == 0 || j == 0)
+                {
+                    lookup[i, j] = false;
+                }else if (nums[i - 1] > j)
+                {
+                    lookup[i, j] = lookup[i - 1, j];
+                }else if (nums[i - 1] == j)
+                {
+                    lookup[i, j] = true;
+                }
+                else
+                {
+                    lookup[i, j] = lookup[i - 1, j] || lookup[i - 1, j - nums[i - 1]];
+                }
+            }
+        }
         
-        lookup[index, sum] = true;
-        
-        return false;
-
+        return lookup[nums.Length, sum];
     }
 }
