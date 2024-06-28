@@ -1,27 +1,26 @@
 public class Solution
 {
+    private bool[,] lookup;
     public bool CanPartition(int[] nums)
     {
-        var sum = nums.Sum();
+        int sum = 0;
+        foreach (var number in nums)
+            sum += number;
         if (sum % 2 != 0) return false;
         sum /= 2;
-        var lookup = new bool[nums.Length + 1, sum + 1];
+        lookup = new bool[nums.Length + 1, sum + 1];
+        return Recursion(nums, 0, sum);
+    }
 
-        for (var i = 0; i <= nums.Length; i++)
-        {
-            for (var j = 0; j <= sum; j++) 
-            {
-                if (i == 0 || j == 0)
-                    lookup[i, j] = false;
-                else if (nums[i - 1] > j)
-                    lookup[i, j] = lookup[i - 1, j]; // if curr sum value is greater than the current element value then just skip(take previous value)
-                else if (nums[i - 1] == j)
-                    lookup[i, j] = true; //  
-                else
-                    lookup[i, j] = lookup[i - 1, j] || lookup[i - 1, j - nums[i - 1]];
-            }
-        }
+    public bool Recursion(int[] nums, int index, int sum){
+        if (sum == 0) return true;
+        if (index == nums.Length || sum < 0 || lookup[index, sum]) return false;
 
-        return lookup[nums.Length, sum];
+        if(Recursion(nums, index + 1, sum - nums[index]) || Recursion(nums, index + 1, sum)) return true;
+        
+        lookup[index, sum] = true;
+        
+        return false;
+
     }
 }
