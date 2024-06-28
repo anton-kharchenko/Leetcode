@@ -9,14 +9,14 @@ public class Solution
 
         for (var i = 0; i <= nums.Length; i++)
         {
-            for (var j = 0; j <= sum; j++)
+            for (var j = 0; j <= sum; j++) 
             {
                 if (i == 0 || j == 0)
                     lookup[i, j] = false;
                 else if (nums[i - 1] > j)
-                    lookup[i, j] = lookup[i - 1, j];
+                    lookup[i, j] = lookup[i - 1, j]; // if curr sum value is greater than the current element value then just skip(take previous value)
                 else if (nums[i - 1] == j)
-                    lookup[i, j] = true;
+                    lookup[i, j] = true; //  
                 else
                     lookup[i, j] = lookup[i - 1, j] || lookup[i - 1, j - nums[i - 1]];
             }
