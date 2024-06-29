@@ -16,25 +16,25 @@ public class Solution {
         
         for (int i = 0; i < adj.Count; i++)
         {
-            var children = new Stack<int>();
+            var children = new List<int>();
             Dfs(i, adj, new HashSet<int>(), children);
             var res = new List<int>();
-            while (children.Count() > 1)
+            for (int j = 1; j < children.Count; j++)
             {
-                res.Add(children.Pop());
+                res.Add(children[j]);
             }
             res.Sort();
-            ans[children.Peek()] = res;
+            ans[children[0]] = res;
         }
 
         
         return ans;
     }
 
-    private void Dfs(int vertex, Dictionary<int, List<int>> adj, HashSet<int> visited, Stack<int> children)
+    private void Dfs(int vertex, Dictionary<int, List<int>> adj, HashSet<int> visited, List<int> children)
     {
         if(!visited.Add(vertex)) return;
-        children.Push(vertex);
+        children.Add(vertex);
         foreach (var neigh in adj[vertex])
         {
             if(visited.Contains(neigh)) continue;
