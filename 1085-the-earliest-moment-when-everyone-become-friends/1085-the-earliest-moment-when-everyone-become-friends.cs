@@ -1,15 +1,15 @@
 public class Solution {
     public int EarliestAcq(int[][] logs, int n) {
+        Array.Sort(logs, (x,y)=>x[0].CompareTo(y[0]));
+
         int[] parents = new int[n];
         int[] ranks = new int[n];
         int result = 1;
-
+       
         for(var i = 0; i<n; i++){
             parents[i] = i;
             ranks[i] = 0;
         }
-
-        Array.Sort(logs, (x,y)=>x[0].CompareTo(y[0]));
 
         int Find(int value){
             if(value == parents[value]){
@@ -38,7 +38,6 @@ public class Solution {
             return 1;
         }
 
-                
         foreach(var log in logs){
             result += Union(log[1], log[2]);
             if(result == n){
