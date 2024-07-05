@@ -15,9 +15,7 @@ public class Solution {
             if(value == parents[value]){
                 return parents[value];
             }
-            int parent = Find(parents[value]);
-            parents[value] = parent;
-            return parent;
+            return Find(parents[value]);
         }
 
         int Union(int friend1, int friend2){
