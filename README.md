@@ -23,4 +23,16 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1085-the-earliest-moment-when-everyone-become-friends](https://github.com/anton-kharchenko/Leetcode/tree/master/1085-the-earliest-moment-when-everyone-become-friends) |
+## Math
+|  |
+| ------- |
+| [1761-count-sorted-vowel-strings](https://github.com/anton-kharchenko/Leetcode/tree/master/1761-count-sorted-vowel-strings) |
+## Dynamic Programming
+|  |
+| ------- |
+| [1761-count-sorted-vowel-strings](https://github.com/anton-kharchenko/Leetcode/tree/master/1761-count-sorted-vowel-strings) |
+## Combinatorics
+|  |
+| ------- |
+| [1761-count-sorted-vowel-strings](https://github.com/anton-kharchenko/Leetcode/tree/master/1761-count-sorted-vowel-strings) |
 <!---LeetCode Topics End-->
