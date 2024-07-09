@@ -6,6 +6,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [1085-the-earliest-moment-when-everyone-become-friends](https://github.com/anton-kharchenko/Leetcode/tree/master/1085-the-earliest-moment-when-everyone-become-friends) |
 | [1616-minimum-difference-between-largest-and-smallest-value-in-three-moves](https://github.com/anton-kharchenko/Leetcode/tree/master/1616-minimum-difference-between-largest-and-smallest-value-in-three-moves) |
+| [1803-average-waiting-time](https://github.com/anton-kharchenko/Leetcode/tree/master/1803-average-waiting-time) |
 ## Greedy
 |  |
 | ------- |
@@ -35,4 +36,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1761-count-sorted-vowel-strings](https://github.com/anton-kharchenko/Leetcode/tree/master/1761-count-sorted-vowel-strings) |
+## Simulation
+|  |
+| ------- |
+| [1803-average-waiting-time](https://github.com/anton-kharchenko/Leetcode/tree/master/1803-average-waiting-time) |
 <!---LeetCode Topics End-->
