@@ -8,6 +8,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1085-the-earliest-moment-when-everyone-become-friends](https://github.com/anton-kharchenko/Leetcode/tree/master/1085-the-earliest-moment-when-everyone-become-friends) |
 | [1616-minimum-difference-between-largest-and-smallest-value-in-three-moves](https://github.com/anton-kharchenko/Leetcode/tree/master/1616-minimum-difference-between-largest-and-smallest-value-in-three-moves) |
 | [1803-average-waiting-time](https://github.com/anton-kharchenko/Leetcode/tree/master/1803-average-waiting-time) |
+| [1903-design-most-recently-used-queue](https://github.com/anton-kharchenko/Leetcode/tree/master/1903-design-most-recently-used-queue) |
 | [2454-largest-local-values-in-a-matrix](https://github.com/anton-kharchenko/Leetcode/tree/master/2454-largest-local-values-in-a-matrix) |
 ## Greedy
 |  |
@@ -47,4 +48,24 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [2454-largest-local-values-in-a-matrix](https://github.com/anton-kharchenko/Leetcode/tree/master/2454-largest-local-values-in-a-matrix) |
+## Hash Table
+|  |
+| ------- |
+| [1903-design-most-recently-used-queue](https://github.com/anton-kharchenko/Leetcode/tree/master/1903-design-most-recently-used-queue) |
+## Stack
+|  |
+| ------- |
+| [1903-design-most-recently-used-queue](https://github.com/anton-kharchenko/Leetcode/tree/master/1903-design-most-recently-used-queue) |
+## Design
+|  |
+| ------- |
+| [1903-design-most-recently-used-queue](https://github.com/anton-kharchenko/Leetcode/tree/master/1903-design-most-recently-used-queue) |
+## Binary Indexed Tree
+|  |
+| ------- |
+| [1903-design-most-recently-used-queue](https://github.com/anton-kharchenko/Leetcode/tree/master/1903-design-most-recently-used-queue) |
+## Ordered Set
+|  |
+| ------- |
+| [1903-design-most-recently-used-queue](https://github.com/anton-kharchenko/Leetcode/tree/master/1903-design-most-recently-used-queue) |
 <!---LeetCode Topics End-->
