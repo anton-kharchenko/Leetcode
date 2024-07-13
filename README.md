@@ -7,6 +7,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1085-the-earliest-moment-when-everyone-become-friends](https://github.com/anton-kharchenko/Leetcode/tree/master/1085-the-earliest-moment-when-everyone-become-friends) |
 | [1616-minimum-difference-between-largest-and-smallest-value-in-three-moves](https://github.com/anton-kharchenko/Leetcode/tree/master/1616-minimum-difference-between-largest-and-smallest-value-in-three-moves) |
 | [1803-average-waiting-time](https://github.com/anton-kharchenko/Leetcode/tree/master/1803-average-waiting-time) |
+| [2454-largest-local-values-in-a-matrix](https://github.com/anton-kharchenko/Leetcode/tree/master/2454-largest-local-values-in-a-matrix) |
 ## Greedy
 |  |
 | ------- |
@@ -40,4 +41,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1803-average-waiting-time](https://github.com/anton-kharchenko/Leetcode/tree/master/1803-average-waiting-time) |
+## Matrix
+|  |
+| ------- |
+| [2454-largest-local-values-in-a-matrix](https://github.com/anton-kharchenko/Leetcode/tree/master/2454-largest-local-values-in-a-matrix) |
 <!---LeetCode Topics End-->
