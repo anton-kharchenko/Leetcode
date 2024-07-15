@@ -60,11 +60,13 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Stack
 |  |
 | ------- |
+| [0155-min-stack](https://github.com/anton-kharchenko/Leetcode/tree/master/0155-min-stack) |
 | [1903-design-most-recently-used-queue](https://github.com/anton-kharchenko/Leetcode/tree/master/1903-design-most-recently-used-queue) |
 ## Design
 |  |
 | ------- |
 | [0146-lru-cache](https://github.com/anton-kharchenko/Leetcode/tree/master/0146-lru-cache) |
+| [0155-min-stack](https://github.com/anton-kharchenko/Leetcode/tree/master/0155-min-stack) |
 | [0295-find-median-from-data-stream](https://github.com/anton-kharchenko/Leetcode/tree/master/0295-find-median-from-data-stream) |
 | [1903-design-most-recently-used-queue](https://github.com/anton-kharchenko/Leetcode/tree/master/1903-design-most-recently-used-queue) |
 ## Binary Indexed Tree
