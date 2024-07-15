@@ -1,25 +1,47 @@
 public class MinStack {
-    List<int> st;
+    Stack<int> minStack;
+    Stack<int> stack;
     public MinStack() {
-        st = new List<int>();
+        stack = new Stack<int>();
+        minStack = new Stack<int>();
     }
     
     public void Push(int val) {
-        st.Add(val);
+        if (minStack.Count == 0)
+        {
+            minStack.Push(val);
+        }
+        else
+        {
+            if (minStack.Peek() >= val)
+            {
+                minStack.Push(val);
+            }
+        }
+        stack.Push(val);
     }
     
-    public void Pop() {
-        st.RemoveAt(st.Count - 1);
+    public void Pop()
+    {
+        if (stack.Count > 0)
+        {
+            var top = stack.Pop();
+            if (top == minStack.Peek())
+            {
+                minStack.Pop();
+            }
+        }
     }
     
-    public int Top() {
-        return st.Last();
+    public int Top()
+    {
+        return stack.Peek();
     }
     
     public int GetMin() {
-        return st.Min();
+        return minStack.Peek();
     }
-    }
+}
 
 /**
  * Your MinStack object will be instantiated and called as such:
