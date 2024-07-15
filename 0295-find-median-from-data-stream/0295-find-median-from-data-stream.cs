@@ -1,38 +1,28 @@
 public class MedianFinder {
-    PriorityQueue<double,double> _high = new ();
-    PriorityQueue<double,double> _low = new ();
-    double _median;
-    public MedianFinder() {
-        
-    }
-    
+
+    PriorityQueue<int, int> meanHeap = new (Comparer<int>.Create((x,y)=>y.CompareTo(x)));
+    PriorityQueue<int, int> maxHeap = new ();
+
     public void AddNum(int num) {
-        if(_high.Count==0)
-        {    
-            _high.Enqueue(num,num);
-            _median = num;
-        }
-        else if(_high.Count==_low.Count)
+        meanHeap.Enqueue(num,  num);
+        var x = meanHeap.Dequeue();
+        maxHeap.Enqueue(x, x);
+        if (maxHeap.Count > meanHeap.Count)
         {
-            var d = _low.Dequeue();
-            var h = d>num? d: num;
-            _high.Enqueue(h,h);            
-            h = d>num? num: d;
-            _low.Enqueue(h,-h);
-            _median = _high.Peek();
-        }
-        else
-        {
-            var d = _high.Dequeue();
-            var h = Math.Min(num,d);
-            _low.Enqueue(h,-h);
-            h = Math.Max(num,d);
-            _high.Enqueue(h,h);
-            _median = (_high.Peek() + _low.Peek())/2;
+            int y = maxHeap.Dequeue();
+            meanHeap.Enqueue(y, y);
         }
     }
     
     public double FindMedian() {
-        return _median;
+        if (meanHeap.Count == maxHeap.Count)
+        {
+            return (meanHeap.Peek() + (double)maxHeap.Peek())/2;
+        }
+        if (meanHeap.Count > maxHeap.Count)
+        {
+            return meanHeap.Peek();
+        }
+        return maxHeap.Peek();
     }
 }
