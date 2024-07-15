@@ -19,6 +19,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0252-meeting-rooms](https://github.com/anton-kharchenko/Leetcode/tree/master/0252-meeting-rooms) |
+| [0295-find-median-from-data-stream](https://github.com/anton-kharchenko/Leetcode/tree/master/0295-find-median-from-data-stream) |
 | [1085-the-earliest-moment-when-everyone-become-friends](https://github.com/anton-kharchenko/Leetcode/tree/master/1085-the-earliest-moment-when-everyone-become-friends) |
 | [1616-minimum-difference-between-largest-and-smallest-value-in-three-moves](https://github.com/anton-kharchenko/Leetcode/tree/master/1616-minimum-difference-between-largest-and-smallest-value-in-three-moves) |
 ## Linked List
@@ -64,6 +65,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0146-lru-cache](https://github.com/anton-kharchenko/Leetcode/tree/master/0146-lru-cache) |
+| [0295-find-median-from-data-stream](https://github.com/anton-kharchenko/Leetcode/tree/master/0295-find-median-from-data-stream) |
 | [1903-design-most-recently-used-queue](https://github.com/anton-kharchenko/Leetcode/tree/master/1903-design-most-recently-used-queue) |
 ## Binary Indexed Tree
 |  |
@@ -85,4 +87,16 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0146-lru-cache](https://github.com/anton-kharchenko/Leetcode/tree/master/0146-lru-cache) |
+## Two Pointers
+|  |
+| ------- |
+| [0295-find-median-from-data-stream](https://github.com/anton-kharchenko/Leetcode/tree/master/0295-find-median-from-data-stream) |
+## Heap (Priority Queue)
+|  |
+| ------- |
+| [0295-find-median-from-data-stream](https://github.com/anton-kharchenko/Leetcode/tree/master/0295-find-median-from-data-stream) |
+## Data Stream
+|  |
+| ------- |
+| [0295-find-median-from-data-stream](https://github.com/anton-kharchenko/Leetcode/tree/master/0295-find-median-from-data-stream) |
 <!---LeetCode Topics End-->
