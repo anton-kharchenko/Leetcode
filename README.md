@@ -24,6 +24,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Linked List
 |  |
 | ------- |
+| [0146-lru-cache](https://github.com/anton-kharchenko/Leetcode/tree/master/0146-lru-cache) |
 | [2182-find-the-minimum-and-maximum-number-of-nodes-between-critical-points](https://github.com/anton-kharchenko/Leetcode/tree/master/2182-find-the-minimum-and-maximum-number-of-nodes-between-critical-points) |
 ## Union Find
 |  |
@@ -52,6 +53,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Hash Table
 |  |
 | ------- |
+| [0146-lru-cache](https://github.com/anton-kharchenko/Leetcode/tree/master/0146-lru-cache) |
 | [1903-design-most-recently-used-queue](https://github.com/anton-kharchenko/Leetcode/tree/master/1903-design-most-recently-used-queue) |
 | [2306-create-binary-tree-from-descriptions](https://github.com/anton-kharchenko/Leetcode/tree/master/2306-create-binary-tree-from-descriptions) |
 ## Stack
@@ -61,6 +63,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Design
 |  |
 | ------- |
+| [0146-lru-cache](https://github.com/anton-kharchenko/Leetcode/tree/master/0146-lru-cache) |
 | [1903-design-most-recently-used-queue](https://github.com/anton-kharchenko/Leetcode/tree/master/1903-design-most-recently-used-queue) |
 ## Binary Indexed Tree
 |  |
@@ -78,4 +81,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [2306-create-binary-tree-from-descriptions](https://github.com/anton-kharchenko/Leetcode/tree/master/2306-create-binary-tree-from-descriptions) |
+## Doubly-Linked List
+|  |
+| ------- |
+| [0146-lru-cache](https://github.com/anton-kharchenko/Leetcode/tree/master/0146-lru-cache) |
 <!---LeetCode Topics End-->
