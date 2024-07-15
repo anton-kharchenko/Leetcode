@@ -1,56 +1,59 @@
-public class LRUCache {
+public class LRUCache
+{
+    private int _capacity;
+    private Dictionary<int, LinkedListNode<CacheItem>> map;
+    private LinkedList<CacheItem> items;
 
-    private readonly int _capacity;
-    private readonly Dictionary<int, LinkedListNode<CacheItem>> _cacheMap;
-    private readonly LinkedList<CacheItem> _cacheList;
-
-    public LRUCache(int capacity) {
+    public LRUCache(int capacity)
+    {
         _capacity = capacity;
-        _cacheMap = new Dictionary<int, LinkedListNode<CacheItem>>(capacity);
-        _cacheList = new LinkedList<CacheItem>();
+        map = new(_capacity);
+        items = new LinkedList<CacheItem>();
     }
-    
-    public int Get(int key) {
-        if (_cacheMap.TryGetValue(key, out var node))
+
+    public int Get(int key)
+    {
+        if (map.TryGetValue(key, out var node))
         {
-            _cacheList.Remove(node);
-            _cacheList.AddFirst(node);
+            items.Remove(node);
+            items.AddFirst(node);
             return node.Value.Value;
         }
         return -1;
     }
-    
-    public void Put(int key, int value) {
-        if (_cacheMap.TryGetValue(key, out var node))
+
+    public void Put(int key, int value)
+    {
+        if (map.TryGetValue(key, out var node))
         {
             node.Value.Value = value;
-            _cacheList.Remove(node);
-            _cacheList.AddFirst(node);
+            items.Remove(node);
+            items.AddFirst(node);
         }
         else
         {
-            if (_cacheMap.Count >= _capacity)
+            if (_capacity <= map.Count)
             {
-                var lastNode = _cacheList.Last;
-                _cacheMap.Remove(lastNode.Value.Key);
-                _cacheList.RemoveLast();
+                var lastNode = items.Last;
+                items.RemoveLast();
+                map.Remove(lastNode.Value.Key);
             }
 
             var newNode = new LinkedListNode<CacheItem>(new CacheItem(key, value));
-            _cacheMap.Add(key, newNode);
-            _cacheList.AddFirst(newNode);
+            items.AddFirst(newNode);
+            map.Add(key, newNode);
         }
     }
+}
 
-    private class CacheItem
+public class CacheItem
+{
+    public int Key { get; set; }
+    public int Value { get; set; }
+
+    public CacheItem(int key, int value)
     {
-        public int Key { get; }
-        public int Value { get; set; }
-
-        public CacheItem(int key, int value)
-        {
-            Key = key;
-            Value = value;
-        }
+        Key = key;
+        Value = value;
     }
 }
