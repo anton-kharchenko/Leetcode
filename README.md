@@ -6,6 +6,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0252-meeting-rooms](https://github.com/anton-kharchenko/Leetcode/tree/master/0252-meeting-rooms) |
 | [1085-the-earliest-moment-when-everyone-become-friends](https://github.com/anton-kharchenko/Leetcode/tree/master/1085-the-earliest-moment-when-everyone-become-friends) |
+| [1582-design-browser-history](https://github.com/anton-kharchenko/Leetcode/tree/master/1582-design-browser-history) |
 | [1616-minimum-difference-between-largest-and-smallest-value-in-three-moves](https://github.com/anton-kharchenko/Leetcode/tree/master/1616-minimum-difference-between-largest-and-smallest-value-in-three-moves) |
 | [1803-average-waiting-time](https://github.com/anton-kharchenko/Leetcode/tree/master/1803-average-waiting-time) |
 | [1903-design-most-recently-used-queue](https://github.com/anton-kharchenko/Leetcode/tree/master/1903-design-most-recently-used-queue) |
@@ -26,6 +27,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0146-lru-cache](https://github.com/anton-kharchenko/Leetcode/tree/master/0146-lru-cache) |
+| [1582-design-browser-history](https://github.com/anton-kharchenko/Leetcode/tree/master/1582-design-browser-history) |
 | [2182-find-the-minimum-and-maximum-number-of-nodes-between-critical-points](https://github.com/anton-kharchenko/Leetcode/tree/master/2182-find-the-minimum-and-maximum-number-of-nodes-between-critical-points) |
 ## Union Find
 |  |
@@ -61,6 +63,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0155-min-stack](https://github.com/anton-kharchenko/Leetcode/tree/master/0155-min-stack) |
+| [1582-design-browser-history](https://github.com/anton-kharchenko/Leetcode/tree/master/1582-design-browser-history) |
 | [1903-design-most-recently-used-queue](https://github.com/anton-kharchenko/Leetcode/tree/master/1903-design-most-recently-used-queue) |
 ## Design
 |  |
@@ -68,6 +71,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0146-lru-cache](https://github.com/anton-kharchenko/Leetcode/tree/master/0146-lru-cache) |
 | [0155-min-stack](https://github.com/anton-kharchenko/Leetcode/tree/master/0155-min-stack) |
 | [0295-find-median-from-data-stream](https://github.com/anton-kharchenko/Leetcode/tree/master/0295-find-median-from-data-stream) |
+| [1582-design-browser-history](https://github.com/anton-kharchenko/Leetcode/tree/master/1582-design-browser-history) |
 | [1903-design-most-recently-used-queue](https://github.com/anton-kharchenko/Leetcode/tree/master/1903-design-most-recently-used-queue) |
 ## Binary Indexed Tree
 |  |
@@ -89,6 +93,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0146-lru-cache](https://github.com/anton-kharchenko/Leetcode/tree/master/0146-lru-cache) |
+| [1582-design-browser-history](https://github.com/anton-kharchenko/Leetcode/tree/master/1582-design-browser-history) |
 ## Two Pointers
 |  |
 | ------- |
@@ -101,4 +106,5 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0295-find-median-from-data-stream](https://github.com/anton-kharchenko/Leetcode/tree/master/0295-find-median-from-data-stream) |
+| [1582-design-browser-history](https://github.com/anton-kharchenko/Leetcode/tree/master/1582-design-browser-history) |
 <!---LeetCode Topics End-->
