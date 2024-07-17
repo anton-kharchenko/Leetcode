@@ -6,6 +6,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0252-meeting-rooms](https://github.com/anton-kharchenko/Leetcode/tree/master/0252-meeting-rooms) |
 | [1085-the-earliest-moment-when-everyone-become-friends](https://github.com/anton-kharchenko/Leetcode/tree/master/1085-the-earliest-moment-when-everyone-become-friends) |
+| [1207-delete-nodes-and-return-forest](https://github.com/anton-kharchenko/Leetcode/tree/master/1207-delete-nodes-and-return-forest) |
 | [1497-design-a-stack-with-increment-operation](https://github.com/anton-kharchenko/Leetcode/tree/master/1497-design-a-stack-with-increment-operation) |
 | [1582-design-browser-history](https://github.com/anton-kharchenko/Leetcode/tree/master/1582-design-browser-history) |
 | [1616-minimum-difference-between-largest-and-smallest-value-in-three-moves](https://github.com/anton-kharchenko/Leetcode/tree/master/1616-minimum-difference-between-largest-and-smallest-value-in-three-moves) |
@@ -58,6 +59,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0146-lru-cache](https://github.com/anton-kharchenko/Leetcode/tree/master/0146-lru-cache) |
+| [1207-delete-nodes-and-return-forest](https://github.com/anton-kharchenko/Leetcode/tree/master/1207-delete-nodes-and-return-forest) |
 | [1903-design-most-recently-used-queue](https://github.com/anton-kharchenko/Leetcode/tree/master/1903-design-most-recently-used-queue) |
 | [2306-create-binary-tree-from-descriptions](https://github.com/anton-kharchenko/Leetcode/tree/master/2306-create-binary-tree-from-descriptions) |
 ## Stack
@@ -87,10 +89,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Tree
 |  |
 | ------- |
+| [1207-delete-nodes-and-return-forest](https://github.com/anton-kharchenko/Leetcode/tree/master/1207-delete-nodes-and-return-forest) |
 | [2306-create-binary-tree-from-descriptions](https://github.com/anton-kharchenko/Leetcode/tree/master/2306-create-binary-tree-from-descriptions) |
 ## Binary Tree
 |  |
 | ------- |
+| [1207-delete-nodes-and-return-forest](https://github.com/anton-kharchenko/Leetcode/tree/master/1207-delete-nodes-and-return-forest) |
 | [2306-create-binary-tree-from-descriptions](https://github.com/anton-kharchenko/Leetcode/tree/master/2306-create-binary-tree-from-descriptions) |
 ## Doubly-Linked List
 |  |
@@ -110,4 +114,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0295-find-median-from-data-stream](https://github.com/anton-kharchenko/Leetcode/tree/master/0295-find-median-from-data-stream) |
 | [1582-design-browser-history](https://github.com/anton-kharchenko/Leetcode/tree/master/1582-design-browser-history) |
+## Depth-First Search
+|  |
+| ------- |
+| [1207-delete-nodes-and-return-forest](https://github.com/anton-kharchenko/Leetcode/tree/master/1207-delete-nodes-and-return-forest) |
 <!---LeetCode Topics End-->
