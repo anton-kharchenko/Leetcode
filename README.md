@@ -11,6 +11,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1497-design-a-stack-with-increment-operation](https://github.com/anton-kharchenko/Leetcode/tree/master/1497-design-a-stack-with-increment-operation) |
 | [1582-design-browser-history](https://github.com/anton-kharchenko/Leetcode/tree/master/1582-design-browser-history) |
 | [1616-minimum-difference-between-largest-and-smallest-value-in-three-moves](https://github.com/anton-kharchenko/Leetcode/tree/master/1616-minimum-difference-between-largest-and-smallest-value-in-three-moves) |
+| [1711-find-valid-matrix-given-row-and-column-sums](https://github.com/anton-kharchenko/Leetcode/tree/master/1711-find-valid-matrix-given-row-and-column-sums) |
 | [1803-average-waiting-time](https://github.com/anton-kharchenko/Leetcode/tree/master/1803-average-waiting-time) |
 | [1903-design-most-recently-used-queue](https://github.com/anton-kharchenko/Leetcode/tree/master/1903-design-most-recently-used-queue) |
 | [2306-create-binary-tree-from-descriptions](https://github.com/anton-kharchenko/Leetcode/tree/master/2306-create-binary-tree-from-descriptions) |
@@ -19,6 +20,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1616-minimum-difference-between-largest-and-smallest-value-in-three-moves](https://github.com/anton-kharchenko/Leetcode/tree/master/1616-minimum-difference-between-largest-and-smallest-value-in-three-moves) |
+| [1711-find-valid-matrix-given-row-and-column-sums](https://github.com/anton-kharchenko/Leetcode/tree/master/1711-find-valid-matrix-given-row-and-column-sums) |
 ## Sorting
 |  |
 | ------- |
@@ -56,6 +58,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1496-lucky-numbers-in-a-matrix](https://github.com/anton-kharchenko/Leetcode/tree/master/1496-lucky-numbers-in-a-matrix) |
+| [1711-find-valid-matrix-given-row-and-column-sums](https://github.com/anton-kharchenko/Leetcode/tree/master/1711-find-valid-matrix-given-row-and-column-sums) |
 | [2454-largest-local-values-in-a-matrix](https://github.com/anton-kharchenko/Leetcode/tree/master/2454-largest-local-values-in-a-matrix) |
 ## Hash Table
 |  |
