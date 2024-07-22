@@ -43,6 +43,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Math
 |  |
 | ------- |
+| [1274-number-of-days-between-two-dates](https://github.com/anton-kharchenko/Leetcode/tree/master/1274-number-of-days-between-two-dates) |
 | [1761-count-sorted-vowel-strings](https://github.com/anton-kharchenko/Leetcode/tree/master/1761-count-sorted-vowel-strings) |
 ## Dynamic Programming
 |  |
@@ -129,5 +130,6 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0243-shortest-word-distance](https://github.com/anton-kharchenko/Leetcode/tree/master/0243-shortest-word-distance) |
+| [1274-number-of-days-between-two-dates](https://github.com/anton-kharchenko/Leetcode/tree/master/1274-number-of-days-between-two-dates) |
 | [3194-find-words-containing-character](https://github.com/anton-kharchenko/Leetcode/tree/master/3194-find-words-containing-character) |
 <!---LeetCode Topics End-->
