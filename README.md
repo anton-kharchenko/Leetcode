@@ -40,6 +40,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Union Find
 |  |
 | ------- |
+| [0261-graph-valid-tree](https://github.com/anton-kharchenko/Leetcode/tree/master/0261-graph-valid-tree) |
 | [1085-the-earliest-moment-when-everyone-become-friends](https://github.com/anton-kharchenko/Leetcode/tree/master/1085-the-earliest-moment-when-everyone-become-friends) |
 ## Math
 |  |
@@ -127,6 +128,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Depth-First Search
 |  |
 | ------- |
+| [0261-graph-valid-tree](https://github.com/anton-kharchenko/Leetcode/tree/master/0261-graph-valid-tree) |
 | [1207-delete-nodes-and-return-forest](https://github.com/anton-kharchenko/Leetcode/tree/master/1207-delete-nodes-and-return-forest) |
 ## String
 |  |
@@ -134,4 +136,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0243-shortest-word-distance](https://github.com/anton-kharchenko/Leetcode/tree/master/0243-shortest-word-distance) |
 | [1274-number-of-days-between-two-dates](https://github.com/anton-kharchenko/Leetcode/tree/master/1274-number-of-days-between-two-dates) |
 | [3194-find-words-containing-character](https://github.com/anton-kharchenko/Leetcode/tree/master/3194-find-words-containing-character) |
+## Breadth-First Search
+|  |
+| ------- |
+| [0261-graph-valid-tree](https://github.com/anton-kharchenko/Leetcode/tree/master/0261-graph-valid-tree) |
+## Graph
+|  |
+| ------- |
+| [0261-graph-valid-tree](https://github.com/anton-kharchenko/Leetcode/tree/master/0261-graph-valid-tree) |
 <!---LeetCode Topics End-->
