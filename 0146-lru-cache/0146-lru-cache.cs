@@ -1,47 +1,46 @@
 public class LRUCache
 {
     private int _capacity;
-    private Dictionary<int, LinkedListNode<CacheItem>> map;
-    private LinkedList<CacheItem> items;
-
+    private Dictionary<int, LinkedListNode<CacheItem>> _map;
+    private LinkedList<CacheItem> _list;
     public LRUCache(int capacity)
     {
         _capacity = capacity;
-        map = new(_capacity);
-        items = new LinkedList<CacheItem>();
+        _map = new();
+        _list = new();
     }
-
+    
     public int Get(int key)
     {
-        if (map.TryGetValue(key, out var node))
+        if (_map.TryGetValue(key, out var node))
         {
-            items.Remove(node);
-            items.AddFirst(node);
+            _list.Remove(node);
+            _list.AddFirst(node);
             return node.Value.Value;
         }
-        return -1;
+        
+        return - 1;
     }
-
+    
     public void Put(int key, int value)
     {
-        if (map.TryGetValue(key, out var node))
+        if (_map.TryGetValue(key, out var node))
         {
             node.Value.Value = value;
-            items.Remove(node);
-            items.AddFirst(node);
+            _list.Remove(node);
+            _list.AddFirst(node);
         }
         else
         {
-            if (_capacity <= map.Count)
+            if (_map.Count >= _capacity)
             {
-                var lastNode = items.Last;
-                items.RemoveLast();
-                map.Remove(lastNode.Value.Key);
+                var last = _list.Last;
+                _list.RemoveLast();
+                _map.Remove(last.Value.Key);
             }
-
-            var newNode = new LinkedListNode<CacheItem>(new CacheItem(key, value));
-            items.AddFirst(newNode);
-            map.Add(key, newNode);
+            var newNode = new LinkedListNode<CacheItem>(new (key, value));
+            _map.Add(key, newNode);
+            _list.AddFirst(newNode);
         }
     }
 }
@@ -57,3 +56,10 @@ public class CacheItem
         Value = value;
     }
 }
+
+/**
+ * Your LRUCache object will be instantiated and called as such:
+ * LRUCache obj = new LRUCache(capacity);
+ * int param_1 = obj.Get(key);
+ * obj.Put(key,value);
+ */
