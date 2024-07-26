@@ -4,6 +4,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Array
 |  |
 | ------- |
+| [0088-merge-sorted-array](https://github.com/anton-kharchenko/Leetcode/tree/master/0088-merge-sorted-array) |
 | [0243-shortest-word-distance](https://github.com/anton-kharchenko/Leetcode/tree/master/0243-shortest-word-distance) |
 | [0252-meeting-rooms](https://github.com/anton-kharchenko/Leetcode/tree/master/0252-meeting-rooms) |
 | [1085-the-earliest-moment-when-everyone-become-friends](https://github.com/anton-kharchenko/Leetcode/tree/master/1085-the-earliest-moment-when-everyone-become-friends) |
@@ -28,6 +29,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Sorting
 |  |
 | ------- |
+| [0088-merge-sorted-array](https://github.com/anton-kharchenko/Leetcode/tree/master/0088-merge-sorted-array) |
 | [0252-meeting-rooms](https://github.com/anton-kharchenko/Leetcode/tree/master/0252-meeting-rooms) |
 | [0295-find-median-from-data-stream](https://github.com/anton-kharchenko/Leetcode/tree/master/0295-find-median-from-data-stream) |
 | [1085-the-earliest-moment-when-everyone-become-friends](https://github.com/anton-kharchenko/Leetcode/tree/master/1085-the-earliest-moment-when-everyone-become-friends) |
@@ -118,6 +120,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Two Pointers
 |  |
 | ------- |
+| [0088-merge-sorted-array](https://github.com/anton-kharchenko/Leetcode/tree/master/0088-merge-sorted-array) |
 | [0295-find-median-from-data-stream](https://github.com/anton-kharchenko/Leetcode/tree/master/0295-find-median-from-data-stream) |
 ## Heap (Priority Queue)
 |  |
