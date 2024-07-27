@@ -1,29 +1,20 @@
 public class LFUCache {
-
-    private Dictionary<int, CacheItem<int, CacheItem<int, int>>> _cache;
-    private Dictionary<int, List<CacheItem<int, int>>> _frequencies;
+    private Dictionary<int, CacheItem<int, CacheItem<int, int>>> _cache = new();
+    private Dictionary<int, List<CacheItem<int, int>>> _frequencies = new();
     private int _minFrequency;
     private int _capacity;
 
-    public LFUCache(int capacity) {
-        _cache = new();
-        _frequencies = new();
-        _minFrequency = 0;
-        _capacity = capacity;        
-    }    
-    
-    public void Insert(int key, int frequency, int value) {
-        if (!_frequencies.ContainsKey(frequency)) {
-            _frequencies[frequency] = new List<CacheItem<int, int>>();
-        }
-        _frequencies[frequency].Add(new CacheItem<int, int>(key, value));
+    public LFUCache(int capacity) => _capacity = capacity;
+
+    private void Insert(int key, int frequency, int value) {
+        _frequencies.TryAdd(frequency, []);
+        _frequencies[frequency].Add(new(key, value));
         _cache[key] = new CacheItem<int, CacheItem<int, int>>(frequency, _frequencies[frequency].Last());
     }
     
     public int Get(int key) {
-        if (!_cache.TryGetValue(key, out var cacheItem)) {
+        if (!_cache.TryGetValue(key, out var cacheItem)) 
             return -1;
-        }
         
         var frequency = cacheItem.Key;
         var cacheItemValue = cacheItem.Value;
@@ -33,9 +24,7 @@ public class LFUCache {
         if (_frequencies[frequency].Count == 0 && _minFrequency == frequency)
             _minFrequency += 1;
         
-        var nextFrequency = frequency + 1;
-        
-        Insert(key, nextFrequency, cacheItemValue.Value);
+        Insert(key, frequency + 1, cacheItemValue.Value);
         return cacheItemValue.Value;            
     }
     
