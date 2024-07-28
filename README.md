@@ -80,6 +80,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0340-longest-substring-with-at-most-k-distinct-characters](https://github.com/anton-kharchenko/Leetcode/tree/master/0340-longest-substring-with-at-most-k-distinct-characters) |
 | [0460-lfu-cache](https://github.com/anton-kharchenko/Leetcode/tree/master/0460-lfu-cache) |
 | [1207-delete-nodes-and-return-forest](https://github.com/anton-kharchenko/Leetcode/tree/master/1207-delete-nodes-and-return-forest) |
+| [1363-greatest-english-letter-in-upper-and-lower-case](https://github.com/anton-kharchenko/Leetcode/tree/master/1363-greatest-english-letter-in-upper-and-lower-case) |
 | [1741-sort-array-by-increasing-frequency](https://github.com/anton-kharchenko/Leetcode/tree/master/1741-sort-array-by-increasing-frequency) |
 | [1903-design-most-recently-used-queue](https://github.com/anton-kharchenko/Leetcode/tree/master/1903-design-most-recently-used-queue) |
 | [1987-substrings-of-size-three-with-distinct-characters](https://github.com/anton-kharchenko/Leetcode/tree/master/1987-substrings-of-size-three-with-distinct-characters) |
@@ -152,6 +153,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0243-shortest-word-distance](https://github.com/anton-kharchenko/Leetcode/tree/master/0243-shortest-word-distance) |
 | [0340-longest-substring-with-at-most-k-distinct-characters](https://github.com/anton-kharchenko/Leetcode/tree/master/0340-longest-substring-with-at-most-k-distinct-characters) |
 | [1274-number-of-days-between-two-dates](https://github.com/anton-kharchenko/Leetcode/tree/master/1274-number-of-days-between-two-dates) |
+| [1363-greatest-english-letter-in-upper-and-lower-case](https://github.com/anton-kharchenko/Leetcode/tree/master/1363-greatest-english-letter-in-upper-and-lower-case) |
 | [1987-substrings-of-size-three-with-distinct-characters](https://github.com/anton-kharchenko/Leetcode/tree/master/1987-substrings-of-size-three-with-distinct-characters) |
 | [3194-find-words-containing-character](https://github.com/anton-kharchenko/Leetcode/tree/master/3194-find-words-containing-character) |
 ## Breadth-First Search
@@ -173,4 +175,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1987-substrings-of-size-three-with-distinct-characters](https://github.com/anton-kharchenko/Leetcode/tree/master/1987-substrings-of-size-three-with-distinct-characters) |
+## Enumeration
+|  |
+| ------- |
+| [1363-greatest-english-letter-in-upper-and-lower-case](https://github.com/anton-kharchenko/Leetcode/tree/master/1363-greatest-english-letter-in-upper-and-lower-case) |
 <!---LeetCode Topics End-->
