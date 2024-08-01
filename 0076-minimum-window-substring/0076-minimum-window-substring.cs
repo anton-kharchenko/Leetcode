@@ -1,58 +1,38 @@
 public class Solution {
     public string MinWindow(string s, string t) {
+        if (s.Length < t.Length) return "";
+        var map = new int[128];
+        var count = 0;
+        int start = 0, end = 0, minLen = int.MaxValue, startIndex = 0;
         
-    if (string.IsNullOrEmpty(t)) return string.Empty;
-
-    var countT = new Dictionary<char, int>();
-    var window = new Dictionary<char, int>();
-
-    foreach (var c in t)
-    {
-        AddCharToDictionary(c, countT);
-    }
-
-    var have = 0;
-    var need = countT.Count;
-    var left = 0;
-    var res = new[] { -1, -1 };
-    var resultLength = int.MaxValue;
+        foreach (var c in t) 
+            map[c]++;
         
-    for (var right = 0; right < s.Length; right++)
-    {
-        var c = s[right];
-        AddCharToDictionary(c, window);
+        while (end < s.Length) {
+            
+            if (map[s[end]] > 0) 
+                count++;
+            
+            map[s[end]]--;    
+            end++;
 
-        if (countT.ContainsKey(c) && window[c] == countT[c]) have++;
-
-        while (have == need)
-        {
-            // update our result
-            var windowSize = right - left + 1;
-            if (windowSize < resultLength)
-            {
-                res = new[] { left, right };
-                resultLength = windowSize;
+            while (count == t.Length) {
+                
+                if (end - start < minLen) {
+                    startIndex = start;
+                    minLen = end - start;
+                }
+                
+                if (map[s[start]] == 0) {
+                    count--;
+                }
+                
+                map[s[start]]++;
+                start++;
             }
-
-            // pop from the left of our window
-            window[s[left]]--;
-            if (countT.ContainsKey(s[left]) && window[s[left]] < countT[s[left]])
-            {
-                have--;
-            }
-
-            left++;
+          
         }
+
+        return minLen == int.MaxValue ? "" : s.Substring(startIndex, minLen);
     }
-        
-            return resultLength == int.MaxValue
-        ? string.Empty
-        : s.Substring(res[0], res[1] - res[0] + 1);
-    }
-    
-    public void AddCharToDictionary(char c, IDictionary<char, int> dict)
-{
-    if (dict.ContainsKey(c)) dict[c]++;
-    else dict.Add(c, 1);
-}
 }
