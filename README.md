@@ -18,6 +18,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1741-sort-array-by-increasing-frequency](https://github.com/anton-kharchenko/Leetcode/tree/master/1741-sort-array-by-increasing-frequency) |
 | [1803-average-waiting-time](https://github.com/anton-kharchenko/Leetcode/tree/master/1803-average-waiting-time) |
 | [1903-design-most-recently-used-queue](https://github.com/anton-kharchenko/Leetcode/tree/master/1903-design-most-recently-used-queue) |
+| [2035-count-sub-islands](https://github.com/anton-kharchenko/Leetcode/tree/master/2035-count-sub-islands) |
 | [2306-create-binary-tree-from-descriptions](https://github.com/anton-kharchenko/Leetcode/tree/master/2306-create-binary-tree-from-descriptions) |
 | [2454-largest-local-values-in-a-matrix](https://github.com/anton-kharchenko/Leetcode/tree/master/2454-largest-local-values-in-a-matrix) |
 | [3194-find-words-containing-character](https://github.com/anton-kharchenko/Leetcode/tree/master/3194-find-words-containing-character) |
@@ -49,6 +50,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0261-graph-valid-tree](https://github.com/anton-kharchenko/Leetcode/tree/master/0261-graph-valid-tree) |
 | [1085-the-earliest-moment-when-everyone-become-friends](https://github.com/anton-kharchenko/Leetcode/tree/master/1085-the-earliest-moment-when-everyone-become-friends) |
+| [2035-count-sub-islands](https://github.com/anton-kharchenko/Leetcode/tree/master/2035-count-sub-islands) |
 ## Math
 |  |
 | ------- |
@@ -72,6 +74,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [1496-lucky-numbers-in-a-matrix](https://github.com/anton-kharchenko/Leetcode/tree/master/1496-lucky-numbers-in-a-matrix) |
 | [1711-find-valid-matrix-given-row-and-column-sums](https://github.com/anton-kharchenko/Leetcode/tree/master/1711-find-valid-matrix-given-row-and-column-sums) |
+| [2035-count-sub-islands](https://github.com/anton-kharchenko/Leetcode/tree/master/2035-count-sub-islands) |
 | [2454-largest-local-values-in-a-matrix](https://github.com/anton-kharchenko/Leetcode/tree/master/2454-largest-local-values-in-a-matrix) |
 ## Hash Table
 |  |
@@ -148,6 +151,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0261-graph-valid-tree](https://github.com/anton-kharchenko/Leetcode/tree/master/0261-graph-valid-tree) |
 | [1207-delete-nodes-and-return-forest](https://github.com/anton-kharchenko/Leetcode/tree/master/1207-delete-nodes-and-return-forest) |
+| [2035-count-sub-islands](https://github.com/anton-kharchenko/Leetcode/tree/master/2035-count-sub-islands) |
 ## String
 |  |
 | ------- |
@@ -164,6 +168,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0261-graph-valid-tree](https://github.com/anton-kharchenko/Leetcode/tree/master/0261-graph-valid-tree) |
+| [2035-count-sub-islands](https://github.com/anton-kharchenko/Leetcode/tree/master/2035-count-sub-islands) |
 ## Graph
 |  |
 | ------- |
