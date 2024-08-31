@@ -5,6 +5,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0088-merge-sorted-array](https://github.com/anton-kharchenko/Leetcode/tree/master/0088-merge-sorted-array) |
+| [0121-best-time-to-buy-and-sell-stock](https://github.com/anton-kharchenko/Leetcode/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0243-shortest-word-distance](https://github.com/anton-kharchenko/Leetcode/tree/master/0243-shortest-word-distance) |
 | [0252-meeting-rooms](https://github.com/anton-kharchenko/Leetcode/tree/master/0252-meeting-rooms) |
 | [1062-partition-array-into-three-parts-with-equal-sum](https://github.com/anton-kharchenko/Leetcode/tree/master/1062-partition-array-into-three-parts-with-equal-sum) |
@@ -60,6 +61,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Dynamic Programming
 |  |
 | ------- |
+| [0121-best-time-to-buy-and-sell-stock](https://github.com/anton-kharchenko/Leetcode/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [1761-count-sorted-vowel-strings](https://github.com/anton-kharchenko/Leetcode/tree/master/1761-count-sorted-vowel-strings) |
 ## Combinatorics
 |  |
