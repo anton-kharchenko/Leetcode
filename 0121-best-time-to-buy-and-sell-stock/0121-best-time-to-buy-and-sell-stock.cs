@@ -1,18 +1,20 @@
 public class Solution {
-    public int MaxProfit(int[] prices) {
-        int ans = 0, min = prices[0];
-        
-        for(var i = 1; i<prices.Length; i++){
-            var curr = prices[i];
-            if(min<curr){
-                ans = Math.Max(curr - min, ans);
-                
-            }else{
-                min = curr;
+    public int MaxProfit(int[] prices)
+    {
+        var min = prices[0];
+        var maxProfit = 0;
+        for (int i = 1; i < prices.Length; i++)
+        {
+            if (prices[i] < min)
+            {
+                min = prices[i];
+            }
+            else
+            {
+                maxProfit = Math.Max(maxProfit, prices[i] - min);
             }
         }
-        
-        return ans;
 
+        return maxProfit;
     }
 }
