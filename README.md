@@ -156,6 +156,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/anton-kharchenko/Leetcode/tree/master/0003-longest-substring-without-repeating-characters) |
+| [0014-longest-common-prefix](https://github.com/anton-kharchenko/Leetcode/tree/master/0014-longest-common-prefix) |
 | [0076-minimum-window-substring](https://github.com/anton-kharchenko/Leetcode/tree/master/0076-minimum-window-substring) |
 | [0159-longest-substring-with-at-most-two-distinct-characters](https://github.com/anton-kharchenko/Leetcode/tree/master/0159-longest-substring-with-at-most-two-distinct-characters) |
 | [0243-shortest-word-distance](https://github.com/anton-kharchenko/Leetcode/tree/master/0243-shortest-word-distance) |
@@ -189,4 +190,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1363-greatest-english-letter-in-upper-and-lower-case](https://github.com/anton-kharchenko/Leetcode/tree/master/1363-greatest-english-letter-in-upper-and-lower-case) |
+## Trie
+|  |
+| ------- |
+| [0014-longest-common-prefix](https://github.com/anton-kharchenko/Leetcode/tree/master/0014-longest-common-prefix) |
 <!---LeetCode Topics End-->
