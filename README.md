@@ -57,6 +57,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Math
 |  |
 | ------- |
+| [0007-reverse-integer](https://github.com/anton-kharchenko/Leetcode/tree/master/0007-reverse-integer) |
 | [1274-number-of-days-between-two-dates](https://github.com/anton-kharchenko/Leetcode/tree/master/1274-number-of-days-between-two-dates) |
 | [1761-count-sorted-vowel-strings](https://github.com/anton-kharchenko/Leetcode/tree/master/1761-count-sorted-vowel-strings) |
 | [3476-find-minimum-operations-to-make-all-elements-divisible-by-three](https://github.com/anton-kharchenko/Leetcode/tree/master/3476-find-minimum-operations-to-make-all-elements-divisible-by-three) |
