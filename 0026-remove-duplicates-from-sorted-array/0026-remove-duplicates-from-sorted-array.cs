@@ -1,18 +1,14 @@
-public class Solution
-{
-    public int RemoveDuplicates(int[] nums)
-    {
-        var arr = new HashSet<int>(nums).ToArray(); // O(n)
-        
-        Array.Fill(nums, 0); // O(n)
-        
-        for(var i = 0; i<arr.Length; i++){
-            nums[i] = arr[i]; 
+public class Solution {
+    public int RemoveDuplicates(int[] nums) {
+        var writeIndex = 1;
+
+        for(var readIndex = 1; readIndex<nums.Length; readIndex++){
+            if(nums[readIndex] != nums[readIndex - 1]){
+                nums[writeIndex] = nums[readIndex];
+                writeIndex += 1;
+            }
         }
-        
-        return arr.Length;
+
+        return writeIndex;
     }
 }
-
-// Space - O(n)
-// Time - O(n)
