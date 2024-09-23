@@ -102,6 +102,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1903-design-most-recently-used-queue](https://github.com/anton-kharchenko/Leetcode/tree/master/1903-design-most-recently-used-queue) |
 | [1987-substrings-of-size-three-with-distinct-characters](https://github.com/anton-kharchenko/Leetcode/tree/master/1987-substrings-of-size-three-with-distinct-characters) |
 | [2306-create-binary-tree-from-descriptions](https://github.com/anton-kharchenko/Leetcode/tree/master/2306-create-binary-tree-from-descriptions) |
+| [2427-first-letter-to-appear-twice](https://github.com/anton-kharchenko/Leetcode/tree/master/2427-first-letter-to-appear-twice) |
 ## Stack
 |  |
 | ------- |
@@ -177,6 +178,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1274-number-of-days-between-two-dates](https://github.com/anton-kharchenko/Leetcode/tree/master/1274-number-of-days-between-two-dates) |
 | [1363-greatest-english-letter-in-upper-and-lower-case](https://github.com/anton-kharchenko/Leetcode/tree/master/1363-greatest-english-letter-in-upper-and-lower-case) |
 | [1987-substrings-of-size-three-with-distinct-characters](https://github.com/anton-kharchenko/Leetcode/tree/master/1987-substrings-of-size-three-with-distinct-characters) |
+| [2427-first-letter-to-appear-twice](https://github.com/anton-kharchenko/Leetcode/tree/master/2427-first-letter-to-appear-twice) |
 | [3194-find-words-containing-character](https://github.com/anton-kharchenko/Leetcode/tree/master/3194-find-words-containing-character) |
 ## Breadth-First Search
 |  |
@@ -200,6 +202,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0837-most-common-word](https://github.com/anton-kharchenko/Leetcode/tree/master/0837-most-common-word) |
 | [1987-substrings-of-size-three-with-distinct-characters](https://github.com/anton-kharchenko/Leetcode/tree/master/1987-substrings-of-size-three-with-distinct-characters) |
+| [2427-first-letter-to-appear-twice](https://github.com/anton-kharchenko/Leetcode/tree/master/2427-first-letter-to-appear-twice) |
 ## Enumeration
 |  |
 | ------- |
@@ -208,4 +211,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0014-longest-common-prefix](https://github.com/anton-kharchenko/Leetcode/tree/master/0014-longest-common-prefix) |
+## Bit Manipulation
+|  |
+| ------- |
+| [2427-first-letter-to-appear-twice](https://github.com/anton-kharchenko/Leetcode/tree/master/2427-first-letter-to-appear-twice) |
 <!---LeetCode Topics End-->
