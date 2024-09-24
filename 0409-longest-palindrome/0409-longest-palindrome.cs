@@ -1,31 +1,29 @@
 public class Solution {
     public int LongestPalindrome(string s) {
-        var count = 0;
-        var set = new HashSet<char>();
-
-        foreach (var i in s)
+        var dict = new Dictionary<char, int>();
+        foreach (var letter in s)
         {
-            if (set.Contains(i))
+            dict.TryAdd(letter, 0);
+            dict[letter] += 1;
+        }
+
+        var result = 0;
+        foreach (var (letter, count) in dict)
+        {
+            if (count % 2 == 0)
             {
-                count++;
-                set.Remove(i);
-            }
-            else
+                result += count;
+            }else
             {
-                set.Add(i);
+                if (count > 2)
+                {
+                    result += count - 1;
+                }
             }
         }
 
-        if (count < 1)
-        {
-            return 1;
-        }
-
-        if (s.Length > count * 2)
-        {
-            return count * 2 + 1;
-        }
-
-        return count * 2;
+        if (dict.Values.Any(i => i % 2 == 1))
+            result += 1;
+        return result;
     }
 }
