@@ -10,30 +10,55 @@
  * }
  */
 public class Solution {
-    public bool IsPalindrome(ListNode head) {
-        
-        Stack<int> stack = new Stack<int>();
-        ListNode slow = head;
-        ListNode fast = head;
-        
-        while (fast != null && fast.next != null) {
-            stack.Push(slow.val);
+    public bool IsPalindrome(ListNode head)
+    {
+        if (head.next == null) return true;
+        var slow = new Node(head).head;
+        var fast = new Node(head).head;
+        while (fast != null && fast.next != null)
+        {
             slow = slow.next;
             fast = fast.next.next;
         }
-        
-        if (fast != null) { // odd length list
+
+        var current = new Node(head).head;
+        slow = ReverseLinkedList(slow);
+        while (slow != null)
+        {
+            if (current.val != slow.val) return false;
+            current = current.next;
             slow = slow.next;
         }
-        
-        while (slow != null) {
-            if (slow.val != stack.Pop()) {
-                return false;
-            }
-            slow = slow.next;
-        }
-        
+
         return true;
-        
+    }
+
+    public ListNode ReverseLinkedList(ListNode head)
+    {
+        ListNode reversed = null;
+        var current = head;
+        while (current!= null)
+        {
+            var next = current.next;
+            current.next = reversed;
+            reversed = current;
+            current = next;
+        }
+        return reversed;
+    }
+}
+
+public class Node
+{
+    public ListNode head;
+
+    public Node()
+    {
+        this.head = null;
+    }
+
+    public Node(ListNode head)
+    {
+        this.head = head;
     }
 }
