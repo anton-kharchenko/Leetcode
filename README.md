@@ -8,6 +8,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0026-remove-duplicates-from-sorted-array](https://github.com/anton-kharchenko/Leetcode/tree/master/0026-remove-duplicates-from-sorted-array) |
 | [0088-merge-sorted-array](https://github.com/anton-kharchenko/Leetcode/tree/master/0088-merge-sorted-array) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/anton-kharchenko/Leetcode/tree/master/0121-best-time-to-buy-and-sell-stock) |
+| [0200-number-of-islands](https://github.com/anton-kharchenko/Leetcode/tree/master/0200-number-of-islands) |
 | [0243-shortest-word-distance](https://github.com/anton-kharchenko/Leetcode/tree/master/0243-shortest-word-distance) |
 | [0252-meeting-rooms](https://github.com/anton-kharchenko/Leetcode/tree/master/0252-meeting-rooms) |
 | [0837-most-common-word](https://github.com/anton-kharchenko/Leetcode/tree/master/0837-most-common-word) |
@@ -55,6 +56,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Union Find
 |  |
 | ------- |
+| [0200-number-of-islands](https://github.com/anton-kharchenko/Leetcode/tree/master/0200-number-of-islands) |
 | [0261-graph-valid-tree](https://github.com/anton-kharchenko/Leetcode/tree/master/0261-graph-valid-tree) |
 | [1085-the-earliest-moment-when-everyone-become-friends](https://github.com/anton-kharchenko/Leetcode/tree/master/1085-the-earliest-moment-when-everyone-become-friends) |
 | [2035-count-sub-islands](https://github.com/anton-kharchenko/Leetcode/tree/master/2035-count-sub-islands) |
@@ -82,6 +84,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Matrix
 |  |
 | ------- |
+| [0200-number-of-islands](https://github.com/anton-kharchenko/Leetcode/tree/master/0200-number-of-islands) |
 | [1496-lucky-numbers-in-a-matrix](https://github.com/anton-kharchenko/Leetcode/tree/master/1496-lucky-numbers-in-a-matrix) |
 | [1711-find-valid-matrix-given-row-and-column-sums](https://github.com/anton-kharchenko/Leetcode/tree/master/1711-find-valid-matrix-given-row-and-column-sums) |
 | [2035-count-sub-islands](https://github.com/anton-kharchenko/Leetcode/tree/master/2035-count-sub-islands) |
@@ -168,6 +171,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Depth-First Search
 |  |
 | ------- |
+| [0200-number-of-islands](https://github.com/anton-kharchenko/Leetcode/tree/master/0200-number-of-islands) |
 | [0261-graph-valid-tree](https://github.com/anton-kharchenko/Leetcode/tree/master/0261-graph-valid-tree) |
 | [1207-delete-nodes-and-return-forest](https://github.com/anton-kharchenko/Leetcode/tree/master/1207-delete-nodes-and-return-forest) |
 | [2035-count-sub-islands](https://github.com/anton-kharchenko/Leetcode/tree/master/2035-count-sub-islands) |
@@ -191,6 +195,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Breadth-First Search
 |  |
 | ------- |
+| [0200-number-of-islands](https://github.com/anton-kharchenko/Leetcode/tree/master/0200-number-of-islands) |
 | [0261-graph-valid-tree](https://github.com/anton-kharchenko/Leetcode/tree/master/0261-graph-valid-tree) |
 | [2035-count-sub-islands](https://github.com/anton-kharchenko/Leetcode/tree/master/2035-count-sub-islands) |
 ## Graph
