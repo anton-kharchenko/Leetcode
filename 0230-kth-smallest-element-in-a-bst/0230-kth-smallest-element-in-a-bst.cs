@@ -12,18 +12,24 @@
  * }
  */
 public class Solution {
-    List<int> nodes = new List<int>();
-    public int KthSmallest(TreeNode root, int k) {
-        Dfs(root);
-        nodes.Sort(); // Time - O(n logn); Space - O (n)
-        return nodes[k-1];
+    public int KthSmallest(TreeNode root, int k)
+    {
+        var pq = new PriorityQueue<int, int>(Comparer<int>.Create((x,y)=>y.CompareTo(x)));
+        Dfs(root, k, pq);
+        return pq.Peek();
     }
-    
-    public void Dfs(TreeNode node){
-        if(node == null) return;
+
+    public void Dfs(TreeNode root, int k, PriorityQueue<int, int> pq)
+    {
+        if(root is null) return;
         
-        nodes.Add(node.val);
-        Dfs(node.left);
-        Dfs(node.right);
+        pq.Enqueue(root.val, root.val);
+        if (pq.Count > k)
+        {
+            pq.Dequeue();
+        }
+
+        Dfs(root.left, k, pq);
+        Dfs(root.right, k, pq);
     }
 }
