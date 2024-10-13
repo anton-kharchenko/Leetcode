@@ -15,21 +15,23 @@ public class Solution {
     public int KthSmallest(TreeNode root, int k)
     {
         var pq = new PriorityQueue<int, int>(Comparer<int>.Create((x,y)=>y.CompareTo(x)));
-        Dfs(root, k, pq);
+        DFS(root, pq, k);
         return pq.Peek();
     }
 
-    public void Dfs(TreeNode root, int k, PriorityQueue<int, int> pq)
+    public void DFS(TreeNode node, PriorityQueue<int, int> pq, int k)
     {
-        if(root is null) return;
-        
-        pq.Enqueue(root.val, root.val);
+        if (node is null)
+        {
+            return;
+        }
+
+        pq.Enqueue(node.val, node.val);
         if (pq.Count > k)
         {
             pq.Dequeue();
         }
-
-        Dfs(root.left, k, pq);
-        Dfs(root.right, k, pq);
+        DFS(node.left, pq, k);
+        DFS(node.right, pq, k);
     }
 }
