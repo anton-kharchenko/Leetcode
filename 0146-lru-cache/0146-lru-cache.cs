@@ -1,46 +1,46 @@
 public class LRUCache
 {
+    private Dictionary<int, LinkedListNode<CacheItem>> _frequency = new();
+    private LinkedList<CacheItem> _linkedList =new();
     private int _capacity;
-    private Dictionary<int, LinkedListNode<CacheItem>> _map;
-    private LinkedList<CacheItem> _list;
     public LRUCache(int capacity)
     {
         _capacity = capacity;
-        _map = new();
-        _list = new();
     }
     
-    public int Get(int key)
-    {
-        if (_map.TryGetValue(key, out var node))
+    public int Get(int key) {
+        if (_frequency.TryGetValue(key, out var listNode))
         {
-            _list.Remove(node);
-            _list.AddFirst(node);
-            return node.Value.Value;
+            _linkedList.Remove(listNode.Value);
+            _linkedList.AddFirst(listNode);
+            return listNode.Value.Value;
         }
-        
-        return - 1;
+
+        return -1;
     }
     
-    public void Put(int key, int value)
-    {
-        if (_map.TryGetValue(key, out var node))
+    public void Put(int key, int value) {
+        if (_frequency.TryGetValue(key, out var existingNode))
         {
-            node.Value.Value = value;
-            _list.Remove(node);
-            _list.AddFirst(node);
+            existingNode.Value.Value = value;
+            _linkedList.Remove(existingNode);
+            _linkedList.AddFirst(existingNode);
         }
         else
         {
-            if (_map.Count >= _capacity)
+            if (_frequency.Count >= _capacity)
             {
-                var last = _list.Last;
-                _list.RemoveLast();
-                _map.Remove(last.Value.Key);
+                var lastNode = _linkedList.Last;
+                if (lastNode != null)
+                {
+                    _linkedList.RemoveLast(); 
+                    _frequency.Remove(lastNode.Value.Key);
+                }
             }
-            var newNode = new LinkedListNode<CacheItem>(new (key, value));
-            _map.Add(key, newNode);
-            _list.AddFirst(newNode);
+
+            var listNode = new LinkedListNode<CacheItem>(new CacheItem(key, value));
+            _linkedList.AddFirst(listNode);
+            _frequency[key] = listNode;
         }
     }
 }
