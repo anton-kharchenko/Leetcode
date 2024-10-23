@@ -10,6 +10,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0088-merge-sorted-array](https://github.com/anton-kharchenko/Leetcode/tree/master/0088-merge-sorted-array) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/anton-kharchenko/Leetcode/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0200-number-of-islands](https://github.com/anton-kharchenko/Leetcode/tree/master/0200-number-of-islands) |
+| [0212-word-search-ii](https://github.com/anton-kharchenko/Leetcode/tree/master/0212-word-search-ii) |
 | [0243-shortest-word-distance](https://github.com/anton-kharchenko/Leetcode/tree/master/0243-shortest-word-distance) |
 | [0252-meeting-rooms](https://github.com/anton-kharchenko/Leetcode/tree/master/0252-meeting-rooms) |
 | [0833-bus-routes](https://github.com/anton-kharchenko/Leetcode/tree/master/0833-bus-routes) |
@@ -88,6 +89,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0200-number-of-islands](https://github.com/anton-kharchenko/Leetcode/tree/master/0200-number-of-islands) |
+| [0212-word-search-ii](https://github.com/anton-kharchenko/Leetcode/tree/master/0212-word-search-ii) |
 | [1496-lucky-numbers-in-a-matrix](https://github.com/anton-kharchenko/Leetcode/tree/master/1496-lucky-numbers-in-a-matrix) |
 | [1711-find-valid-matrix-given-row-and-column-sums](https://github.com/anton-kharchenko/Leetcode/tree/master/1711-find-valid-matrix-given-row-and-column-sums) |
 | [2035-count-sub-islands](https://github.com/anton-kharchenko/Leetcode/tree/master/2035-count-sub-islands) |
@@ -191,6 +193,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0076-minimum-window-substring](https://github.com/anton-kharchenko/Leetcode/tree/master/0076-minimum-window-substring) |
 | [0159-longest-substring-with-at-most-two-distinct-characters](https://github.com/anton-kharchenko/Leetcode/tree/master/0159-longest-substring-with-at-most-two-distinct-characters) |
 | [0205-isomorphic-strings](https://github.com/anton-kharchenko/Leetcode/tree/master/0205-isomorphic-strings) |
+| [0212-word-search-ii](https://github.com/anton-kharchenko/Leetcode/tree/master/0212-word-search-ii) |
 | [0243-shortest-word-distance](https://github.com/anton-kharchenko/Leetcode/tree/master/0243-shortest-word-distance) |
 | [0340-longest-substring-with-at-most-k-distinct-characters](https://github.com/anton-kharchenko/Leetcode/tree/master/0340-longest-substring-with-at-most-k-distinct-characters) |
 | [0409-longest-palindrome](https://github.com/anton-kharchenko/Leetcode/tree/master/0409-longest-palindrome) |
@@ -233,6 +236,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0014-longest-common-prefix](https://github.com/anton-kharchenko/Leetcode/tree/master/0014-longest-common-prefix) |
+| [0212-word-search-ii](https://github.com/anton-kharchenko/Leetcode/tree/master/0212-word-search-ii) |
 ## Bit Manipulation
 |  |
 | ------- |
@@ -245,4 +249,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0230-kth-smallest-element-in-a-bst](https://github.com/anton-kharchenko/Leetcode/tree/master/0230-kth-smallest-element-in-a-bst) |
+## Backtracking
+|  |
+| ------- |
+| [0212-word-search-ii](https://github.com/anton-kharchenko/Leetcode/tree/master/0212-word-search-ii) |
 <!---LeetCode Topics End-->
