@@ -14,24 +14,18 @@
 public class Solution {
     public int KthSmallest(TreeNode root, int k)
     {
-        var pq = new PriorityQueue<int, int>(Comparer<int>.Create((x,y)=>y.CompareTo(x)));
-        DFS(root, pq, k);
-        return pq.Peek();
+        var minHeap = new PriorityQueue<int, int>(Comparer<int>.Create((x, y) => y.CompareTo(x)));
+        FillHeap(minHeap, root, k);
+        return minHeap.Peek();
     }
 
-    public void DFS(TreeNode node, PriorityQueue<int, int> pq, int k)
+    private void FillHeap(PriorityQueue<int, int> minHeap, TreeNode root, int i)
     {
-        if (node is null)
-        {
-            return;
-        }
-
-        pq.Enqueue(node.val, node.val);
-        if (pq.Count > k)
-        {
-            pq.Dequeue();
-        }
-        DFS(node.left, pq, k);
-        DFS(node.right, pq, k);
+        if(root == null) return;
+        minHeap.Enqueue(root.val, root.val);
+        if(i < minHeap.Count) minHeap.Dequeue();
+        FillHeap(minHeap, root.left, i);
+        FillHeap(minHeap, root.right, i);
     }
 }
+
