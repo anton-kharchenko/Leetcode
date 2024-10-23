@@ -17,6 +17,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0837-most-common-word](https://github.com/anton-kharchenko/Leetcode/tree/master/0837-most-common-word) |
 | [1062-partition-array-into-three-parts-with-equal-sum](https://github.com/anton-kharchenko/Leetcode/tree/master/1062-partition-array-into-three-parts-with-equal-sum) |
 | [1085-the-earliest-moment-when-everyone-become-friends](https://github.com/anton-kharchenko/Leetcode/tree/master/1085-the-earliest-moment-when-everyone-become-friends) |
+| [1098-largest-unique-number](https://github.com/anton-kharchenko/Leetcode/tree/master/1098-largest-unique-number) |
 | [1207-delete-nodes-and-return-forest](https://github.com/anton-kharchenko/Leetcode/tree/master/1207-delete-nodes-and-return-forest) |
 | [1496-lucky-numbers-in-a-matrix](https://github.com/anton-kharchenko/Leetcode/tree/master/1496-lucky-numbers-in-a-matrix) |
 | [1497-design-a-stack-with-increment-operation](https://github.com/anton-kharchenko/Leetcode/tree/master/1497-design-a-stack-with-increment-operation) |
@@ -46,6 +47,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0252-meeting-rooms](https://github.com/anton-kharchenko/Leetcode/tree/master/0252-meeting-rooms) |
 | [0295-find-median-from-data-stream](https://github.com/anton-kharchenko/Leetcode/tree/master/0295-find-median-from-data-stream) |
 | [1085-the-earliest-moment-when-everyone-become-friends](https://github.com/anton-kharchenko/Leetcode/tree/master/1085-the-earliest-moment-when-everyone-become-friends) |
+| [1098-largest-unique-number](https://github.com/anton-kharchenko/Leetcode/tree/master/1098-largest-unique-number) |
 | [1616-minimum-difference-between-largest-and-smallest-value-in-three-moves](https://github.com/anton-kharchenko/Leetcode/tree/master/1616-minimum-difference-between-largest-and-smallest-value-in-three-moves) |
 | [1741-sort-array-by-increasing-frequency](https://github.com/anton-kharchenko/Leetcode/tree/master/1741-sort-array-by-increasing-frequency) |
 ## Linked List
@@ -109,6 +111,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0460-lfu-cache](https://github.com/anton-kharchenko/Leetcode/tree/master/0460-lfu-cache) |
 | [0833-bus-routes](https://github.com/anton-kharchenko/Leetcode/tree/master/0833-bus-routes) |
 | [0837-most-common-word](https://github.com/anton-kharchenko/Leetcode/tree/master/0837-most-common-word) |
+| [1098-largest-unique-number](https://github.com/anton-kharchenko/Leetcode/tree/master/1098-largest-unique-number) |
 | [1207-delete-nodes-and-return-forest](https://github.com/anton-kharchenko/Leetcode/tree/master/1207-delete-nodes-and-return-forest) |
 | [1363-greatest-english-letter-in-upper-and-lower-case](https://github.com/anton-kharchenko/Leetcode/tree/master/1363-greatest-english-letter-in-upper-and-lower-case) |
 | [1741-sort-array-by-increasing-frequency](https://github.com/anton-kharchenko/Leetcode/tree/master/1741-sort-array-by-increasing-frequency) |
