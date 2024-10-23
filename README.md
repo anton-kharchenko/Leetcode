@@ -6,6 +6,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0001-two-sum](https://github.com/anton-kharchenko/Leetcode/tree/master/0001-two-sum) |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/anton-kharchenko/Leetcode/tree/master/0026-remove-duplicates-from-sorted-array) |
+| [0068-text-justification](https://github.com/anton-kharchenko/Leetcode/tree/master/0068-text-justification) |
 | [0088-merge-sorted-array](https://github.com/anton-kharchenko/Leetcode/tree/master/0088-merge-sorted-array) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/anton-kharchenko/Leetcode/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0200-number-of-islands](https://github.com/anton-kharchenko/Leetcode/tree/master/0200-number-of-islands) |
@@ -80,6 +81,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Simulation
 |  |
 | ------- |
+| [0068-text-justification](https://github.com/anton-kharchenko/Leetcode/tree/master/0068-text-justification) |
 | [1803-average-waiting-time](https://github.com/anton-kharchenko/Leetcode/tree/master/1803-average-waiting-time) |
 | [2132-convert-1d-array-into-2d-array](https://github.com/anton-kharchenko/Leetcode/tree/master/2132-convert-1d-array-into-2d-array) |
 ## Matrix
@@ -185,6 +187,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/anton-kharchenko/Leetcode/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0014-longest-common-prefix](https://github.com/anton-kharchenko/Leetcode/tree/master/0014-longest-common-prefix) |
+| [0068-text-justification](https://github.com/anton-kharchenko/Leetcode/tree/master/0068-text-justification) |
 | [0076-minimum-window-substring](https://github.com/anton-kharchenko/Leetcode/tree/master/0076-minimum-window-substring) |
 | [0159-longest-substring-with-at-most-two-distinct-characters](https://github.com/anton-kharchenko/Leetcode/tree/master/0159-longest-substring-with-at-most-two-distinct-characters) |
 | [0205-isomorphic-strings](https://github.com/anton-kharchenko/Leetcode/tree/master/0205-isomorphic-strings) |
