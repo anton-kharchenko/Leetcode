@@ -15,6 +15,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0252-meeting-rooms](https://github.com/anton-kharchenko/Leetcode/tree/master/0252-meeting-rooms) |
 | [0833-bus-routes](https://github.com/anton-kharchenko/Leetcode/tree/master/0833-bus-routes) |
 | [0837-most-common-word](https://github.com/anton-kharchenko/Leetcode/tree/master/0837-most-common-word) |
+| [1016-subarray-sums-divisible-by-k](https://github.com/anton-kharchenko/Leetcode/tree/master/1016-subarray-sums-divisible-by-k) |
 | [1062-partition-array-into-three-parts-with-equal-sum](https://github.com/anton-kharchenko/Leetcode/tree/master/1062-partition-array-into-three-parts-with-equal-sum) |
 | [1085-the-earliest-moment-when-everyone-become-friends](https://github.com/anton-kharchenko/Leetcode/tree/master/1085-the-earliest-moment-when-everyone-become-friends) |
 | [1098-largest-unique-number](https://github.com/anton-kharchenko/Leetcode/tree/master/1098-largest-unique-number) |
@@ -111,6 +112,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0460-lfu-cache](https://github.com/anton-kharchenko/Leetcode/tree/master/0460-lfu-cache) |
 | [0833-bus-routes](https://github.com/anton-kharchenko/Leetcode/tree/master/0833-bus-routes) |
 | [0837-most-common-word](https://github.com/anton-kharchenko/Leetcode/tree/master/0837-most-common-word) |
+| [1016-subarray-sums-divisible-by-k](https://github.com/anton-kharchenko/Leetcode/tree/master/1016-subarray-sums-divisible-by-k) |
 | [1098-largest-unique-number](https://github.com/anton-kharchenko/Leetcode/tree/master/1098-largest-unique-number) |
 | [1207-delete-nodes-and-return-forest](https://github.com/anton-kharchenko/Leetcode/tree/master/1207-delete-nodes-and-return-forest) |
 | [1363-greatest-english-letter-in-upper-and-lower-case](https://github.com/anton-kharchenko/Leetcode/tree/master/1363-greatest-english-letter-in-upper-and-lower-case) |
@@ -259,4 +261,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0212-word-search-ii](https://github.com/anton-kharchenko/Leetcode/tree/master/0212-word-search-ii) |
+## Prefix Sum
+|  |
+| ------- |
+| [1016-subarray-sums-divisible-by-k](https://github.com/anton-kharchenko/Leetcode/tree/master/1016-subarray-sums-divisible-by-k) |
 <!---LeetCode Topics End-->
