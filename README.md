@@ -214,6 +214,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1987-substrings-of-size-three-with-distinct-characters](https://github.com/anton-kharchenko/Leetcode/tree/master/1987-substrings-of-size-three-with-distinct-characters) |
 | [2427-first-letter-to-appear-twice](https://github.com/anton-kharchenko/Leetcode/tree/master/2427-first-letter-to-appear-twice) |
 | [3194-find-words-containing-character](https://github.com/anton-kharchenko/Leetcode/tree/master/3194-find-words-containing-character) |
+| [3451-string-compression-iii](https://github.com/anton-kharchenko/Leetcode/tree/master/3451-string-compression-iii) |
 ## Breadth-First Search
 |  |
 | ------- |
