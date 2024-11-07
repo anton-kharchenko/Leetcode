@@ -34,6 +34,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2306-create-binary-tree-from-descriptions](https://github.com/anton-kharchenko/Leetcode/tree/master/2306-create-binary-tree-from-descriptions) |
 | [2454-largest-local-values-in-a-matrix](https://github.com/anton-kharchenko/Leetcode/tree/master/2454-largest-local-values-in-a-matrix) |
 | [3194-find-words-containing-character](https://github.com/anton-kharchenko/Leetcode/tree/master/3194-find-words-containing-character) |
+| [3247-number-of-same-end-substrings](https://github.com/anton-kharchenko/Leetcode/tree/master/3247-number-of-same-end-substrings) |
 | [3476-find-minimum-operations-to-make-all-elements-divisible-by-three](https://github.com/anton-kharchenko/Leetcode/tree/master/3476-find-minimum-operations-to-make-all-elements-divisible-by-three) |
 ## Greedy
 |  |
@@ -124,6 +125,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1987-substrings-of-size-three-with-distinct-characters](https://github.com/anton-kharchenko/Leetcode/tree/master/1987-substrings-of-size-three-with-distinct-characters) |
 | [2306-create-binary-tree-from-descriptions](https://github.com/anton-kharchenko/Leetcode/tree/master/2306-create-binary-tree-from-descriptions) |
 | [2427-first-letter-to-appear-twice](https://github.com/anton-kharchenko/Leetcode/tree/master/2427-first-letter-to-appear-twice) |
+| [3247-number-of-same-end-substrings](https://github.com/anton-kharchenko/Leetcode/tree/master/3247-number-of-same-end-substrings) |
 ## Stack
 |  |
 | ------- |
@@ -214,6 +216,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1987-substrings-of-size-three-with-distinct-characters](https://github.com/anton-kharchenko/Leetcode/tree/master/1987-substrings-of-size-three-with-distinct-characters) |
 | [2427-first-letter-to-appear-twice](https://github.com/anton-kharchenko/Leetcode/tree/master/2427-first-letter-to-appear-twice) |
 | [3194-find-words-containing-character](https://github.com/anton-kharchenko/Leetcode/tree/master/3194-find-words-containing-character) |
+| [3247-number-of-same-end-substrings](https://github.com/anton-kharchenko/Leetcode/tree/master/3247-number-of-same-end-substrings) |
 | [3451-string-compression-iii](https://github.com/anton-kharchenko/Leetcode/tree/master/3451-string-compression-iii) |
 ## Breadth-First Search
 |  |
@@ -240,6 +243,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0837-most-common-word](https://github.com/anton-kharchenko/Leetcode/tree/master/0837-most-common-word) |
 | [1987-substrings-of-size-three-with-distinct-characters](https://github.com/anton-kharchenko/Leetcode/tree/master/1987-substrings-of-size-three-with-distinct-characters) |
 | [2427-first-letter-to-appear-twice](https://github.com/anton-kharchenko/Leetcode/tree/master/2427-first-letter-to-appear-twice) |
+| [3247-number-of-same-end-substrings](https://github.com/anton-kharchenko/Leetcode/tree/master/3247-number-of-same-end-substrings) |
 ## Enumeration
 |  |
 | ------- |
@@ -269,4 +273,5 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1016-subarray-sums-divisible-by-k](https://github.com/anton-kharchenko/Leetcode/tree/master/1016-subarray-sums-divisible-by-k) |
+| [3247-number-of-same-end-substrings](https://github.com/anton-kharchenko/Leetcode/tree/master/3247-number-of-same-end-substrings) |
 <!---LeetCode Topics End-->
