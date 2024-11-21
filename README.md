@@ -14,6 +14,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0198-house-robber](https://github.com/anton-kharchenko/Leetcode/tree/master/0198-house-robber) |
 | [0200-number-of-islands](https://github.com/anton-kharchenko/Leetcode/tree/master/0200-number-of-islands) |
 | [0212-word-search-ii](https://github.com/anton-kharchenko/Leetcode/tree/master/0212-word-search-ii) |
+| [0238-product-of-array-except-self](https://github.com/anton-kharchenko/Leetcode/tree/master/0238-product-of-array-except-self) |
 | [0243-shortest-word-distance](https://github.com/anton-kharchenko/Leetcode/tree/master/0243-shortest-word-distance) |
 | [0252-meeting-rooms](https://github.com/anton-kharchenko/Leetcode/tree/master/0252-meeting-rooms) |
 | [0833-bus-routes](https://github.com/anton-kharchenko/Leetcode/tree/master/0833-bus-routes) |
@@ -284,6 +285,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Prefix Sum
 |  |
 | ------- |
+| [0238-product-of-array-except-self](https://github.com/anton-kharchenko/Leetcode/tree/master/0238-product-of-array-except-self) |
 | [1016-subarray-sums-divisible-by-k](https://github.com/anton-kharchenko/Leetcode/tree/master/1016-subarray-sums-divisible-by-k) |
 | [3247-number-of-same-end-substrings](https://github.com/anton-kharchenko/Leetcode/tree/master/3247-number-of-same-end-substrings) |
 <!---LeetCode Topics End-->
