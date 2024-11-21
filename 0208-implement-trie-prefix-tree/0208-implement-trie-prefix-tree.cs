@@ -1,53 +1,48 @@
-public class Trie {
- public Node root = null;
-
+public class Trie
+{
+    private Node root = new();
     public Trie()
     {
-        root = new Node();
     }
-
+    
     public void Insert(string word)
     {
         var node = root;
-        foreach(var i in word){
-            if(!node.children.ContainsKey(i)){
-                node.children[i] =  new Node();
-            }
-           node = node.children[i];
+        foreach (var letter in word)
+        {
+            node.children.TryAdd(letter, new Node());
+            node = node.children[letter];
         }
-        node.word = true;
+
+        node.isWord = true;
     }
-
-    public bool Search(string word)
-    {
+    
+    public bool Search(string word) {
         var node = root;
-        foreach(var i in word){
-            if(!node.children.ContainsKey(i)){
-                return false;
-            }
-            node = node.children[i];
+        foreach (var letter in word)
+        {
+            if (!node.children.TryGetValue(letter, out var child)) return false;
+            node = child;
         }
-        return node.word;
+        
+        return node.isWord;
     }
-
-    public bool StartsWith(string prefix)
-    {
+    
+    public bool StartsWith(string prefix) {
         var node = root;
-        foreach(var i in prefix){
-            if(!node.children.ContainsKey(i)){
-                return false;
-            }
-            node = node.children[i];
+        foreach (var letter in prefix)
+        {
+            if (!node.children.TryGetValue(letter, out var child)) return false;
+            node = child;
         }
-
+        
         return true;
     }
 }
 
 public class Node{
-    public bool word {get; set;}
-    public Dictionary<char, Node> children {get; set;}
-    
+    public Dictionary<char, Node> children;
+    public bool isWord;
     public Node(){
         children = new Dictionary<char, Node>();
     }
