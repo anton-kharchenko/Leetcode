@@ -1,30 +1,27 @@
-public class Solution
-{
+public class Solution {
     public int[] ProductExceptSelf(int[] nums)
     {
-        var length = nums.Length;
-
-        var left = new int[length];
-        Array.Fill(left, 1);
-        for (int i = 1; i < length; i++)
+        var leftProd = new int[nums.Length];
+        var rightProd = new int[nums.Length];
+        var product = new int[nums.Length];
+        Array.Fill(leftProd, 1);
+        Array.Fill(rightProd, 1);
+        
+        for (int i = 1; i < nums.Length; i++)
         {
-            left[i] = left[i - 1] * nums[i - 1];
+            leftProd[i] = nums[i - 1] * leftProd[i - 1];
+        }
+        
+        for (int i = nums.Length - 2; i >= 0; i--)
+        {
+            rightProd[i] = nums[i + 1] * rightProd[i + 1];
         }
 
-        var right = new int[length];
-        Array.Fill(right, 1);
-        for (int i = length - 2; i >= 0; i--)
+        for (int i = 0; i < nums.Length; i++)
         {
-            right[i] = right[i + 1] * nums[i + 1];
+            product[i] = leftProd[i] * rightProd[i];
         }
-
-        var product = new int[length];
-
-        for (int i = 0; i < length; i++)
-        {
-            product[i] = left[i] * right[i];
-        }
-
+            
         return product;
     }
 }
